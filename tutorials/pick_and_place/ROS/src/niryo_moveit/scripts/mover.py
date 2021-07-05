@@ -104,6 +104,7 @@ def plan_pick_and_place(req):
 
     previous_ending_joint_angles = grasp_pose.joint_trajectory.points[-1].positions
 
+
     # Pick Up - raise gripper back to the pre grasp position
     pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
     
@@ -111,6 +112,14 @@ def plan_pick_and_place(req):
         return response
 
     previous_ending_joint_angles = pick_up_pose.joint_trajectory.points[-1].positions
+
+    # Align
+    align_pose = plan_trajectory(move_group, req.align_pose, previous_ending_joint_angles)
+    
+    if not align_pose.joint_trajectory.points:
+        return response
+
+    previous_ending_joint_angles = align_pose.joint_trajectory.points[-1].positions
 
     # Place - move gripper to desired placement position
     place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
@@ -122,6 +131,7 @@ def plan_pick_and_place(req):
     response.trajectories.append(pre_grasp_pose)
     response.trajectories.append(grasp_pose)
     response.trajectories.append(pick_up_pose)
+    response.trajectories.append(align_pose)
     response.trajectories.append(place_pose)
 
     move_group.clear_pose_targets()

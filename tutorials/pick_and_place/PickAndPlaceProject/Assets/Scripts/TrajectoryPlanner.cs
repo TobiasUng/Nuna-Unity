@@ -47,6 +47,7 @@ public class TrajectoryPlanner : MonoBehaviour
     {
         PreGrasp,
         Grasp,
+        Align,
         PickUp,
         Place
     };

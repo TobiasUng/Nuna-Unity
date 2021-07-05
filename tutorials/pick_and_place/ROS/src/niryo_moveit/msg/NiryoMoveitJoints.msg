@@ -5,4 +5,5 @@ float64 joint_03
 float64 joint_04
 float64 joint_05
 geometry_msgs/Pose pick_pose
+geometry_msgs/Pose align_pose
 geometry_msgs/Pose place_pose
