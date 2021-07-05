@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\niryo_moveit",
+    "\\niryo_moveit\\scripts",
+    "\\niryo_moveit\\srv"
+  ],
+  "SelectedNode": "\\niryo_moveit\\srv\\MoverService.srv",
+  "PreviewInSolutionExplorer": false
+}
