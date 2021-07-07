@@ -35,8 +35,6 @@ public class ButtonPress : MonoBehaviour
                 var screwPlacement = button.GetComponent<ScrewPlacement>();
                 screwPlacement.moveTargetToPlacement();
                 
-
-
             }
         }
 
