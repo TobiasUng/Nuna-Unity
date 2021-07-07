@@ -125,17 +125,17 @@ public class TrajectoryPlanner : MonoBehaviour
         request.align_pose = new MPose
         {
 
-            /*//position = (startPos.transform.position).To<FLU>(),
+            //position = (startPos.transform.position).To<FLU>(),
             position = new Vector3(targetPlacement.transform.position.x, targetPlacement.transform.position.y, plane.transform.position.z).To<FLU>(),
             // The hardcoded x/z angles assure that the gripper is always positioned above the target cube before grasping.
             orientation = Quaternion.Euler(0, 0, 90).To<FLU>()
-            //orientation = Quaternion.Euler(0, 0, 0).To<FLU>()*/
+            //orientation = Quaternion.Euler(0, 0, 0).To<FLU>()
 
-            //position = (startPos.transform.position).To<FLU>(),
+            /*//position = (startPos.transform.position).To<FLU>(),
             position = (startPos.transform.position).To<FLU>(),
             // The hardcoded x/z angles assure that the gripper is always positioned above the target cube before grasping.
             orientation = Quaternion.Euler(0, 0, 0).To<FLU>()
-            //orientation = Quaternion.Euler(0, 0, 0).To<FLU>()
+            //orientation = Quaternion.Euler(0, 0, 0).To<FLU>()*/
         };
 
 
