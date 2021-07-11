@@ -5,8 +5,7 @@ using UnityEngine;
 public class Angle : MonoBehaviour
 {
 
-    public static Transform player;
-    public static Transform target;
+   
     public static float AngleDir(Vector3 forward, Vector3 targetDir, Vector3 up)
     {
         Vector3 perpendicular = Vector3.Cross(forward, targetDir);

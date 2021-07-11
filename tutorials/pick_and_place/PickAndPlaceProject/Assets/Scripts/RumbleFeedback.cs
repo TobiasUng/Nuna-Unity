@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Rumbler : MonoBehaviour
+public class RumbleFeedback : MonoBehaviour
 {
     public float minMotorSpeed = 0.1f;
     public bool shouldRumble = true;

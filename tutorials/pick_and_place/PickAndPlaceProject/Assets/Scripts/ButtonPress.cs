@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class ButtonPress : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ButtonPress : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 GameObject button = hit.transform.gameObject;
                 //button.GetComponent<TrajectoryPlanner>().PublishJoints();*/
                 var screwPlacement = button.GetComponent<ScrewPlacement>();

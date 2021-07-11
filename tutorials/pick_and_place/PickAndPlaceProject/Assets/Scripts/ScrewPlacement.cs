@@ -21,7 +21,7 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(screw != null)
         {
-            rumbler.GetComponent<Rumbler>().startRumble(getDistance(), Angle.AngleDir(player.transform, screw.transform));
+            rumbler.GetComponent<RumbleFeedback>().startRumble(getDistance(), Angle.AngleDir(player.transform, screw.transform));
         }
 
     }
@@ -57,7 +57,7 @@ public class ScrewPlacement : MonoBehaviour
         {
          
             Destroy(screw);
-            rumbler.GetComponent<Rumbler>().stopRumble();
+            rumbler.GetComponent<RumbleFeedback>().stopRumble();
         }
     }
 
