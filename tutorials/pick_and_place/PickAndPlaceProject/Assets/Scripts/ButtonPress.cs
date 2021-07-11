@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonPress : MonoBehaviour
 {
     private Ray ray;
     public LayerMask buttonLayerMask;
+    
     //public Material hover;
     //public Material prevHover;
     // Start is called before the first frame update
@@ -21,10 +23,6 @@ public class ButtonPress : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, 10f, buttonLayerMask))
         {
-
-            
-            
-            
             /*prevHover = button.GetComponent<Renderer>().material;
             button.GetComponent<Renderer>().material = hover;*/
 

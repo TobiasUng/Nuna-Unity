@@ -9,6 +9,7 @@ public class ScrewPlacement : MonoBehaviour
     public GameObject screw;
     public GameObject publisher;
     public GameObject rumbler;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,7 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(screw != null)
         {
-           
-            rumbler.GetComponent<Rumbler>().startRumble(getDistance());
+            rumbler.GetComponent<Rumbler>().startRumble(getDistance(), Angle.AngleDir(player.transform, screw.transform));
         }
 
     }

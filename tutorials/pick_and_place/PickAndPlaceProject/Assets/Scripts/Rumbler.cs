@@ -31,10 +31,14 @@ public class Rumbler : MonoBehaviour
         }
     }*/
 
-    public void startRumble(float distance)
+    public void startRumble(float distance, float angle)
     {
+
+        hiFreq = Mathf.Max(0, angle);
+
         if (Gamepad.current != null)
         {
+            
             calcPulseStep(distance);
             pulsate();
         }
