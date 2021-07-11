@@ -4,13 +4,13 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(AudioSource))]
-public class AudioFeedback : MonoBehaviour
+public class AudioFeedback : IProximityFeedback
 {
 
     public AudioSource audioSource;
     public bool shouldPlay = true;
     public float? pulseDuration;
-    public float? pulseStep = 0.5f;
+    public float? pulseStep = 0.05f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,26 +24,23 @@ public class AudioFeedback : MonoBehaviour
         pulsate();
     }
 
-
-    /*public void startRumble(float distance, float angle)
+    
+    public override void startFeedback(float distance, float angle)
     {
 
-        hiFreq = Mathf.Max(0, angle);
-
-        if (Gamepad.current != null)
-        {
-
-            calcPulseStep(distance);
-            pulsate();
-        }
+       
     }
 
-    public void calcPulseStep(float distance)
+    public override void stopFeedback()
+    {
+
+    }
+    /*public void calcPulseStep(float distance)
     {
         pulseStep = Mathf.Abs(mapToZeroOne(distance, 0, 1) - 1);
     }*/
 
-    public void pulsate()
+    public override void pulsate()
     {
         
         if(Time.time < pulseDuration && shouldPlay)

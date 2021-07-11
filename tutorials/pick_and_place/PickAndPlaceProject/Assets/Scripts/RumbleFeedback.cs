@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RumbleFeedback : MonoBehaviour
+public class RumbleFeedback : IProximityFeedback
 {
     public float minMotorSpeed = 0.1f;
     public bool shouldRumble = true;
@@ -31,7 +31,7 @@ public class RumbleFeedback : MonoBehaviour
         }
     }*/
 
-    public void startRumble(float distance, float angle)
+    public override void startFeedback(float distance, float angle)
     {
 
         hiFreq = Mathf.Max(0, angle);
@@ -49,7 +49,7 @@ public class RumbleFeedback : MonoBehaviour
         pulseStep = Mathf.Abs(mapToZeroOne(distance, 0, 1) - 1);
     }
 
-    public void pulsate()
+    public override void pulsate()
     {
         if (pulseDuration == null)
         {
@@ -75,7 +75,7 @@ public class RumbleFeedback : MonoBehaviour
         
     }
 
-    public void stopRumble()
+    public override void stopFeedback()
     {
         if (Gamepad.current != null)
         {
