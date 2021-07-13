@@ -11,7 +11,7 @@ public class AudioFeedbackPulse : IPulseFeedback
     public bool shouldPlay = true;
     public float? pulseDuration;
     public float? pulseStep = 0.1f;
-    public float stereoPan = 0.0f;
+   
 
 
     // Start is called before the first frame update
@@ -30,7 +30,16 @@ public class AudioFeedbackPulse : IPulseFeedback
     public override void giveFeedback(float distance, float angle, GameObject placement)
     {
         //stereoPan = angle;
-        audioSource.panStereo = angle;
+        if (angle < 0)
+        {
+            audioSource.panStereo = Mathf.Pow(Mathf.Abs(angle), 1f / 3f) * (-1);
+        }
+
+        else
+        {
+            audioSource.panStereo = Mathf.Pow(angle, 1f/3f);
+        }
+        //audioSource.panStereo = angle;
         calcPulseStep(distance);
         pulsate();
        
