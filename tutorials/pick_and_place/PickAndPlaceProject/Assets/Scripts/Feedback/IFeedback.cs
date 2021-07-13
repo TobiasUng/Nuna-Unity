@@ -12,7 +12,7 @@ public abstract class IFeedback : MonoBehaviour
         float mappedValue = (value - from) / (to - from) * (1f - 0) + 0;
         mappedValue = Mathf.Abs(mappedValue - 1);
         return mappedValue;
-        //return Mathf.Pow(mappedValue, 2);
+        return Mathf.Pow(mappedValue, 2);
         //return Mathf.Pow(mappedValue, 6);
         /*
         Debug.Log( (float)(maxMotorSpeed * Mathf.Pow(mappedValue, 4)));
