@@ -32,7 +32,7 @@ public class ButtonPress : MonoBehaviour
                 
                 GameObject button = hit.transform.gameObject;
                 //button.GetComponent<TrajectoryPlanner>().PublishJoints();*/
-                var screwPlacement = button.GetComponent<ScrewPlacement>();
+                var screwPlacement = button.GetComponentInParent<ScrewPlacement>();
                 screwPlacement.moveTargetToPlacement();
                 
             }

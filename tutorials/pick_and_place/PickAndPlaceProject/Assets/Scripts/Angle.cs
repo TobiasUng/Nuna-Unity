@@ -20,7 +20,7 @@ public class Angle : MonoBehaviour
 
         Vector3 targetDir = (player.transform.position - target.transform.position).normalized;
         Vector3 perpendicular = Vector3.Cross(player.transform.forward, targetDir);
-        float dir = Vector3.Dot(perpendicular, player.transform.up);
+        float dir = Vector3.Dot(perpendicular, Vector3.down);
 
         return dir;
     }

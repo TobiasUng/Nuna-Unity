@@ -21,7 +21,7 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(screw != null)
         {
-            feedback.startFeedback(getDistance(), Angle.AngleDir(player.transform, screw.transform));
+            feedback.giveFeedback(getDistance(), Angle.AngleDir(player.transform, screw.transform));
         }
 
     }
@@ -55,7 +55,9 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(other.gameObject == screw)
         {
-         
+            //transform.GetChild(0).GetComponent<Renderer>().material = Resources.Load("Materials/Green", typeof(Material)) as Material; 
+            
+            Destroy(transform.GetChild(0).gameObject);
             Destroy(screw);
             feedback.stopFeedback();
         }

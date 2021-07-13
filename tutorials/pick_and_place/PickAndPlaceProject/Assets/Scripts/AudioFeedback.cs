@@ -10,24 +10,29 @@ public class AudioFeedback : IProximityFeedback
     public AudioSource audioSource;
     public bool shouldPlay = true;
     public float? pulseDuration;
-    public float? pulseStep = 0.05f;
+    public float? pulseStep = 0.1f;
+    public float stereoPan = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        pulseDuration = Time.time + pulseStep;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        pulsate();
+        
     }
 
     
-    public override void startFeedback(float distance, float angle)
+    public override void giveFeedback(float distance, float angle)
     {
-
+        //stereoPan = angle;
+        audioSource.panStereo = angle;
+        calcPulseStep(distance);
+        pulsate();
        
     }
 
@@ -42,8 +47,13 @@ public class AudioFeedback : IProximityFeedback
 
     public override void pulsate()
     {
-        
-        if(Time.time < pulseDuration && shouldPlay)
+
+        if (pulseDuration == null)
+        {
+            pulseDuration = Time.time + pulseStep;
+        }
+
+        if (Time.time < pulseDuration && shouldPlay)
         {
             shouldPlay = false;
             audioSource.Play();
@@ -56,5 +66,10 @@ public class AudioFeedback : IProximityFeedback
             pulseDuration = Time.time + pulseStep;
         }
 
+    }
+
+    public void calcPulseStep(float distance)
+    {
+        pulseStep = Mathf.Abs(mapToZeroOne(distance, 0, 1) - 1);
     }
 }
