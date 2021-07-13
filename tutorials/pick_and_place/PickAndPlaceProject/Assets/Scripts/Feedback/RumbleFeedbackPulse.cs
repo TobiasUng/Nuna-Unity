@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RumbleFeedback : IProximityFeedback
+public class RumbleFeedbackPulse : IPulseFeedback
 {
     public float minMotorSpeed = 0.1f;
     public bool shouldRumble = true;
@@ -31,7 +31,7 @@ public class RumbleFeedback : IProximityFeedback
         }
     }*/
 
-    public override void giveFeedback(float distance, float angle)
+    public override void giveFeedback(float distance, float angle, GameObject placement)
     {
 
         hiFreq = Mathf.Max(0, angle);

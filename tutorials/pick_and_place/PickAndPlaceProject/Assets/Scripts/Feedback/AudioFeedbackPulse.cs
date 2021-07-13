@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(AudioSource))]
-public class AudioFeedback : IProximityFeedback
+public class AudioFeedbackPulse : IPulseFeedback
 {
 
     public AudioSource audioSource;
@@ -27,7 +27,7 @@ public class AudioFeedback : IProximityFeedback
     }
 
     
-    public override void giveFeedback(float distance, float angle)
+    public override void giveFeedback(float distance, float angle, GameObject placement)
     {
         //stereoPan = angle;
         audioSource.panStereo = angle;
