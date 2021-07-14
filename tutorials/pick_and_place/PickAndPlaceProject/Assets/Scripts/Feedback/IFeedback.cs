@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class IFeedback : MonoBehaviour
 {
+    public float? initDistance;
     public abstract void giveFeedback(float distance, float angle, GameObject placement);
     public abstract void stopFeedback();
 

@@ -7,7 +7,7 @@ public class AudioFeedbackContinuous : IContinuousFeedback
 {
 
     public AudioSource audioSource;
-    public float? initDistance;
+    
     
 
     public override void giveFeedback(float distance, float angle, GameObject placement)
