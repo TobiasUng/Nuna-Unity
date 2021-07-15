@@ -19,9 +19,14 @@ public class ScrewPlacement : MonoBehaviour
 
     private void Update()
     {
-        if(screw != null)
+        if(screw != null) // TODO publisher.GetComponent<TrajectoryPlanner>().isExecuting
         {
             feedback.giveFeedback(getDistance(), Angle.AngleDir(player.transform, screw.transform), gameObject.transform.GetChild(0).gameObject);
+
+            if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting)
+            {
+                Destroy(screw);
+            }
         }
 
     }

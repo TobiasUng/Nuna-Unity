@@ -32,12 +32,12 @@ public class AudioFeedbackPulse : IPulseFeedback
         //stereoPan = angle;
         if (angle < 0)
         {
-            audioSource.panStereo = Mathf.Pow(Mathf.Abs(angle), 1f / 3f) * (-1);
+            audioSource.panStereo = -1; //Mathf.Pow(Mathf.Abs(angle), 1f / 3f) * (-1);
         }
 
         else
         {
-            audioSource.panStereo = Mathf.Pow(angle, 1f/3f);
+            audioSource.panStereo = 1; // Mathf.Pow(angle, 1f/3f);
         }
         //audioSource.panStereo = angle;
         calcPulseStep(distance);

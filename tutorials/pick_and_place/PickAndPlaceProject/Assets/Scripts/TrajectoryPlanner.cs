@@ -29,6 +29,7 @@ public class TrajectoryPlanner : MonoBehaviour
     public GameObject targetPlacement;
     public GameObject startPos;
     public GameObject plane;
+    public bool isExecuting = false;
 
     // Articulation Bodies
     private ArticulationBody[] jointArticulationBodies;
@@ -109,6 +110,7 @@ public class TrajectoryPlanner : MonoBehaviour
     /// </summary>
     public void PublishJoints()
     {
+        isExecuting = true;
         isPickUp = true;
 
         MMoverServiceRequest request = new MMoverServiceRequest();
@@ -167,7 +169,9 @@ public class TrajectoryPlanner : MonoBehaviour
         }
         else
         {
+            
             Debug.LogError("No trajectory returned from MoverService.");
+            isExecuting = false;
         }
     }
 
@@ -189,6 +193,7 @@ public class TrajectoryPlanner : MonoBehaviour
     {
         if (response.trajectories != null)
         {
+            isExecuting = true;
             // For every trajectory plan returned
             for (int poseIndex = 0; poseIndex < response.trajectories.Length; poseIndex++)
             {
@@ -218,6 +223,7 @@ public class TrajectoryPlanner : MonoBehaviour
             }
             // All trajectories have been executed, open the gripper to place the target cube
             OpenGripper();
+            isExecuting = false;
         }
     }
 
