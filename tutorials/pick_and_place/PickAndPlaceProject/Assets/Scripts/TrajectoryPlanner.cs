@@ -150,7 +150,7 @@ public class TrajectoryPlanner : MonoBehaviour
             orientation = Quaternion.Euler(0, 0, 90).To<FLU>()
         };
 
-        Debug.Log(request);
+        
 
         ros.SendServiceMessage<MMoverServiceResponse>(rosServiceName, request, TrajectoryResponse);
 

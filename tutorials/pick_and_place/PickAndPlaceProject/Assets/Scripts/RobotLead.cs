@@ -58,7 +58,7 @@ public class RobotLead : MonoBehaviour
             placementIndices.RemoveAt(i);
         }
 
-        Debug.Log(sequence.Count);
+       
 
         return sequence;
     }
