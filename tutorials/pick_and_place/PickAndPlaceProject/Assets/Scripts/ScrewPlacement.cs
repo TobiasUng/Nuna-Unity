@@ -7,6 +7,7 @@ public class ScrewPlacement : MonoBehaviour
 
     public GameObject screwSpawner;
     public GameObject screw;
+    public GameObject screwRepresentation;
     public GameObject publisher;
     public IFeedback feedback;
     public GameObject player;
@@ -56,12 +57,16 @@ public class ScrewPlacement : MonoBehaviour
         
     }
 
-    public void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == screw)
         {
             //transform.GetChild(0).GetComponent<Renderer>().material = Resources.Load("Materials/Green", typeof(Material)) as Material; 
-            
+
+            GameObject screwRep = Instantiate(screwRepresentation);
+            screwRep.transform.parent = this.transform;
+            screwRep.transform.position = this.transform.GetChild(0).position;
+
             Destroy(transform.GetChild(0).gameObject);
             Destroy(screw);
             feedback.stopFeedback();

@@ -26,7 +26,7 @@ public class ScrewSpawner : MonoBehaviour
             return screw;
         }
 
-        return null;
+        return screw;
 
     }
 
