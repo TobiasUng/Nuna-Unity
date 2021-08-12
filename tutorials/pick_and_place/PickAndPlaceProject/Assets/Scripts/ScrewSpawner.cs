@@ -7,6 +7,7 @@ public class ScrewSpawner : MonoBehaviour
    
     public GameObject screwPrefab;
     public GameObject screw;
+    public GameObject publisher;
     
 
 

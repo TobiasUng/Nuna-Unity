@@ -34,31 +34,31 @@ public class ScrewPlacement : MonoBehaviour
 
     public void moveScrewToPlacement()
     {
-        
-        spawnScrewAsChild();
-        var trajectoryPlanner = publisher.GetComponent<TrajectoryPlanner>();
-        if (screw != null)
+        if(screwSpawner.GetComponent<ScrewSpawner>().screw == null && !publisher.GetComponent<TrajectoryPlanner>().isExecuting)
         {
+            spawnScrewAsChild();
+            var trajectoryPlanner = publisher.GetComponent<TrajectoryPlanner>();
+            
             trajectoryPlanner.target = screw;
             trajectoryPlanner.targetPlacement = this.gameObject;
             trajectoryPlanner.PublishJoints();
+            
         }
-        
-
     }
 
     public void spawnScrewAsChild()
     {
+        
         screw = screwSpawner.GetComponent<ScrewSpawner>().spawnScrew();
-        if(screw != null)
-        {
-            screw.GetComponent<Renderer>().material = gameObject.GetComponent<Renderer>().material;
-            screw.transform.parent = gameObject.transform.parent;
-        }
+        
+        
+        screw.GetComponent<Renderer>().material = gameObject.GetComponent<Renderer>().material;
+        screw.transform.parent = gameObject.transform.parent;
+        
         
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if(other.gameObject == screw)
         {
