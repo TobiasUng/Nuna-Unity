@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8786207284514008288}
   - component: {fileID: 4208496782503000922}
   - component: {fileID: 2418696219997690011}
+  - component: {fileID: 5794860951095440923}
   m_Layer: 8
   m_Name: ScrewRepresentation
   m_TagString: Untagged
@@ -96,3 +97,19 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5794860951095440923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9031655500313856076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e9497b912facc429a0e88834f42da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {fileID: 2100000, guid: 4c3f8eb1898ed4744ab356cd2701042c, type: 2}
+  - {fileID: 2100000, guid: 1f42b8ec8de0ba64a8ab335dc749b71e, type: 2}
+  - {fileID: 2100000, guid: 351a807c5fbdd4ff19fde1c2c5449e8c, type: 2}

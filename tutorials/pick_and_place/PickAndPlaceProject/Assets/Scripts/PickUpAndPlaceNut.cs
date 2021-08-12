@@ -10,6 +10,8 @@ public class PickUpAndPlaceNut : MonoBehaviour
     private float sliderProgress = 0;
     private bool isPickUp = true;
 
+    
+
     private void OnMouseDown()
     {
         if (isPickUp)
@@ -41,9 +43,14 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("screw") && isPickUp)
         {
-            sliderProgress += Time.deltaTime / 3f;
-            nut_progress.value = sliderProgress;
-            
+
+
+            if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color)
+            {
+                sliderProgress += Time.deltaTime / 3f;
+                nut_progress.value = sliderProgress;
+            }
+           
             
         }
 
