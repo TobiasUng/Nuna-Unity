@@ -43,26 +43,35 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("screw") && isPickUp)
         {
-
-
-            if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color)
+            if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color && other.transform.childCount == 0)
             {
                 sliderProgress += Time.deltaTime / 3f;
                 nut_progress.value = sliderProgress;
-            }
-           
-            
+            }                      
         }
 
-        if (sliderProgress > 1)
+        if (sliderProgress >= 1)
         {
             isPickUp = false;
             resetProgress();
-            this.transform.parent = null;
+            
             GameObject screw = other.transform.gameObject;
 
+     
+            this.transform.parent = null;
             this.transform.position = screw.transform.position;
             this.transform.rotation = Quaternion.identity;
+            this.transform.parent = screw.transform;
+
+            Transform screwPlacement = screw.transform.parent.parent;
+            screw.transform.parent = null;
+            Transform row = screwPlacement.parent;
+            Destroy(screwPlacement.gameObject);
+            if (row.childCount == 0)
+            {
+                Destroy(row.gameObject);
+            }
+
         }
 
     }

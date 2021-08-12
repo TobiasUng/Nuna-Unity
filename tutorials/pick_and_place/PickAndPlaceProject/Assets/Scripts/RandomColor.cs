@@ -12,7 +12,5 @@ public class RandomColor : MonoBehaviour
     void Start()
     {
         this.GetComponent<Renderer>().material = colors[Random.Range(0, colors.Length)];
-    }
-
-    
+    } 
 }

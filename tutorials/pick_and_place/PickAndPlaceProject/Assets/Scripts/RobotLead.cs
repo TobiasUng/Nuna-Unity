@@ -35,7 +35,7 @@ public class RobotLead : MonoBehaviour
         if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting && operationSequence.Count > 0)
         {
             int i = operationSequence.Pop();
-            screwPlacements[i].GetChild(0).GetComponent<ScrewPlacement>().moveTargetToPlacement();
+            screwPlacements[i].GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
         }
     }
 

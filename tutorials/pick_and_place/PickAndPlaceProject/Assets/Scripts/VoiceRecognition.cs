@@ -38,7 +38,7 @@ public class VoiceRecognition : MonoBehaviour
         if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting)
         {
             Transform placement = screwPlacementsMap[args.text];
-            placement.GetChild(0).GetComponent<ScrewPlacement>().moveTargetToPlacement();
+            placement.GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
         }
         
         

@@ -32,8 +32,9 @@ public class ScrewPlacement : MonoBehaviour
 
     }
 
-    public void moveTargetToPlacement()
+    public void moveScrewToPlacement()
     {
+        
         spawnScrewAsChild();
         var trajectoryPlanner = publisher.GetComponent<TrajectoryPlanner>();
         if (screw != null)
@@ -61,13 +62,22 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(other.gameObject == screw)
         {
-            //transform.GetChild(0).GetComponent<Renderer>().material = Resources.Load("Materials/Green", typeof(Material)) as Material; 
-
+            
             GameObject screwRep = Instantiate(screwRepresentation);
             screwRep.transform.parent = this.transform;
             screwRep.transform.position = this.transform.GetChild(0).position;
-
             Destroy(transform.GetChild(0).gameObject);
+
+            /*if(this.transform.parent.parent.childCount < 2)
+            {
+                Destroy(this.transform.parent.parent.gameObject);
+            }
+
+            else
+            {
+                Destroy(transform.parent.gameObject);
+            }*/
+            
             Destroy(screw);
             feedback.stopFeedback();
         }

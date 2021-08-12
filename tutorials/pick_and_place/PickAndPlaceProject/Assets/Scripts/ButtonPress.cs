@@ -33,7 +33,7 @@ public class ButtonPress : MonoBehaviour
                 GameObject button = hit.transform.gameObject;
                 //button.GetComponent<TrajectoryPlanner>().PublishJoints();*/
                 var screwPlacement = button.GetComponentInParent<ScrewPlacement>();
-                screwPlacement.moveTargetToPlacement();
+                screwPlacement.moveScrewToPlacement();
                 
             }
         }
@@ -42,15 +42,13 @@ public class ButtonPress : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        Debug.Log(other.gameObject.layer);
     
         if(other.gameObject.layer == LayerMask.NameToLayer("button"))
         {
             GameObject button = other.transform.gameObject;
             //button.GetComponent<TrajectoryPlanner>().PublishJoints();*/
             var screwPlacement = button.GetComponentInParent<ScrewPlacement>();
-            screwPlacement.moveTargetToPlacement();
+            screwPlacement.moveScrewToPlacement();
         }
     }
 
