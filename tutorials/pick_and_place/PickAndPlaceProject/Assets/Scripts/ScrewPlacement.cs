@@ -10,19 +10,20 @@ public class ScrewPlacement : MonoBehaviour
     public GameObject screwRepresentation;
     public GameObject publisher;
     public IFeedback feedback;
-    public GameObject player;
+    public GameObject playerCamera;
 
     // Start is called before the first frame update
     void Start()
     {
         feedback = transform.root.GetComponent<WallConfig>().feedback;
+        playerCamera = transform.root.GetComponent<WallConfig>().playerCamera;
     }
 
     private void Update()
     {
         if(screw != null) // TODO publisher.GetComponent<TrajectoryPlanner>().isExecuting
         {
-            feedback.giveFeedback(getDistance(), Angle.AngleDir(player.transform, screw.transform), gameObject.transform.GetChild(0).gameObject);
+            feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, screw.transform), gameObject.transform.GetChild(0).gameObject);
 
             if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting)
             {

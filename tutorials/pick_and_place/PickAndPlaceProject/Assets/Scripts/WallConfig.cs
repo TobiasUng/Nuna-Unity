@@ -5,4 +5,5 @@ using UnityEngine;
 public class WallConfig : MonoBehaviour
 {
     public IFeedback feedback;
+    public GameObject playerCamera;
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <robot name="niryo_one (1)">
   <material name="Mtl">
     <color rgba="0.825 0.8092 0.7907 1" />
@@ -13,7 +13,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/base_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/base_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl">
         <color rgba="0.825 0.8092 0.7907 1" />
@@ -21,14 +21,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/base_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/base_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="shoulder_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/shoulder_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/shoulder_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -36,14 +36,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/shoulder_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/shoulder_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="arm_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/arm_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/arm_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -51,14 +51,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/arm_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/arm_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="elbow_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/elbow_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/elbow_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -66,14 +66,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/elbow_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/elbow_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="forearm_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/forearm_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/forearm_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -81,14 +81,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/forearm_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/forearm_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="wrist_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/wrist_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/wrist_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -96,14 +96,14 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/wrist_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/wrist_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>
   <link name="hand_link">
     <visual>
       <geometry>
-        <mesh filename="package://meshes/hand_link.dae" scale="1 1 1" />
+        <mesh filename="package://meshes/hand_link.dae" scale="5 5 5" />
       </geometry>
       <material name="Mtl1">
         <color rgba="0.4756 0.8228 0.9389 1" />
@@ -111,7 +111,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://meshes/hand_link.stl" scale="1 1 1" />
+        <mesh filename="package://meshes/hand_link.stl" scale="5 5 5" />
       </geometry>
     </collision>
   </link>

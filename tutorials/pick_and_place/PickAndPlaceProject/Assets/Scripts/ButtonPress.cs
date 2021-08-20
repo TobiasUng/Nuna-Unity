@@ -20,23 +20,23 @@ public class ButtonPress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
+        /*RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, 10f, buttonLayerMask))
         {
             /*prevHover = button.GetComponent<Renderer>().material;
             button.GetComponent<Renderer>().material = hover;*/
 
-            if (Input.GetKeyDown(KeyCode.E))
+            /*if (Input.GetKeyDown(KeyCode.E))
             {
                 
                 GameObject button = hit.transform.gameObject;
                 //button.GetComponent<TrajectoryPlanner>().PublishJoints();*/
-                var screwPlacement = button.GetComponentInParent<ScrewPlacement>();
+                /*var screwPlacement = button.GetComponentInParent<ScrewPlacement>();
                 screwPlacement.moveScrewToPlacement();
                 
             }
-        }
+        }*/
 
     }
 
