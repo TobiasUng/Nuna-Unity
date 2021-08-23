@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class PickUpAndPlaceNut : MonoBehaviour
 {
     public Transform pickUp_pos;
+    public GameObject nutRepresentation;
     public Slider nut_progress;
+    public Object grabable;
     private float sliderProgress = 0;
     private bool isPickUp = true;
 
-    
+
+    private void Update()
+    {
+        
+    }
 
     private void OnMouseDown()
     {
@@ -52,26 +58,31 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
         if (sliderProgress >= 1)
         {
+            
             isPickUp = false;
             resetProgress();
             
             GameObject screw = other.transform.gameObject;
+            GameObject nut = Instantiate(nutRepresentation);
+            nut.GetComponent<Renderer>().material = this.GetComponent<Renderer>().material;
 
-     
-            this.transform.parent = null;
-            this.transform.position = screw.transform.position;
-            this.transform.rotation = Quaternion.identity;
-            this.transform.parent = screw.transform;
+            nut.transform.parent = null;
+            nut.transform.position = screw.transform.position;
+            nut.transform.rotation = Quaternion.identity;
+            nut.transform.parent = screw.transform;
 
             Transform screwPlacement = screw.transform.parent.parent;
             screw.transform.parent = null;
             Transform row = screwPlacement.parent;
+            
             Destroy(screwPlacement.gameObject);
             if (row.childCount == 0)
             {
                 Destroy(row.gameObject);
+                
             }
 
+            //Destroy(this.gameObject);
         }
 
     }

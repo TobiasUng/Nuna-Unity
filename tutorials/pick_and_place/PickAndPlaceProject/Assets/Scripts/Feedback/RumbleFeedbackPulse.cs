@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class RumbleFeedbackPulse : IPulseFeedback
 {
@@ -10,17 +11,29 @@ public class RumbleFeedbackPulse : IPulseFeedback
     public float? pulseDuration;
     public float? pulseStep = 0.1f;
 
-    [Header("Low Frequency Rumble")]
-    [Range(0.0f, 1.0f)]
-    public float loFreq = 0.2f;
-    [Header("High Frequency Rumble")]
-    [Range(0.0f, 1.0f)]
-    public float hiFreq = 0.1f;
+    InputDevice rightController;
+    float rightRumble;
+    InputDevice leftController;
+    float leftRumble;
+
+    private void Start()
+    {
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+        rightController = devices[0];
+
+        InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(leftControllerCharacteristics, devices);
+        leftController = devices[0];
+    }
 
     private void Update()
     {
         
     }
+
+
 
     /*public void startRumble(float distance)
     {
@@ -34,11 +47,20 @@ public class RumbleFeedbackPulse : IPulseFeedback
     public override void giveFeedback(float distance, float angle, GameObject placement)
     {
 
-        hiFreq = Mathf.Max(0, angle);
-
-        if (Gamepad.current != null)
+        if(angle > 0)
         {
-            
+            leftRumble = 0;
+            rightRumble = 1;
+        }
+
+        else
+        {
+            leftRumble = 1;
+            rightRumble = 0;
+        }
+
+        if (rightController != null && leftController != null)
+        {            
             calcPulseStep(distance);
             pulsate();
         }
@@ -61,25 +83,30 @@ public class RumbleFeedbackPulse : IPulseFeedback
             shouldRumble = !shouldRumble;
             pulseDuration = Time.time + pulseStep;
 
-            if (shouldRumble)
-            {
-                Gamepad.current.SetMotorSpeeds(0, hiFreq);
-            }
-
-            else
-            {
-                Gamepad.current.SetMotorSpeeds(0, 0);
-            }
-
         }
-        
+
+        if (shouldRumble)
+        {
+            leftController.StopHaptics();
+            rightController.StopHaptics();
+            leftController.SendHapticImpulse(0u, leftRumble, Time.deltaTime);
+            rightController.SendHapticImpulse(0u, rightRumble, Time.deltaTime);
+        }
+
+        else
+        {
+            leftController.StopHaptics();
+            rightController.StopHaptics();
+        }
+
     }
 
     public override void stopFeedback()
     {
-        if (Gamepad.current != null)
+        if (rightController != null && leftController != null)
         {
-            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+            leftController.StopHaptics();
+            rightController.StopHaptics();
         }
     }
 
