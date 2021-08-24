@@ -12,6 +12,8 @@ public class ScrewPlacement : MonoBehaviour
     public IFeedback feedback;
     public GameObject playerCamera;
 
+    private Material screwColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class ScrewPlacement : MonoBehaviour
         playerCamera = transform.root.GetComponent<WallConfig>().playerCamera;
         publisher = transform.root.GetComponent<WallConfig>().publisher;
         screwSpawner = transform.root.GetComponent<WallConfig>().screwSpawner;
+        screwColor = transform.root.GetComponent<WallConfig>().randomColor();
     }
 
     private void Update()
@@ -67,6 +70,7 @@ public class ScrewPlacement : MonoBehaviour
         {
             
             GameObject screwRep = Instantiate(screwRepresentation);
+            screwRep.GetComponent<Renderer>().material = screwColor;
             screwRep.transform.parent = this.transform;
             screwRep.transform.position = this.transform.GetChild(0).position;
             Destroy(transform.GetChild(0).gameObject);

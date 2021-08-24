@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class NutSpawner : MonoBehaviour
 {
     public GameObject nutPrefab;
-
     public Slider nut_progress;
+    public float time;
 
     public void spawnNut()
     {
@@ -15,6 +15,8 @@ public class NutSpawner : MonoBehaviour
         
         nut.GetComponent<Renderer>().material = this.GetComponent<Renderer>().material;
         nut.GetComponent<PickUpAndPlaceNut>().nut_progress = nut_progress;
+        nut.GetComponent<PickUpAndPlaceNut>().time = time;
         nut.transform.position = transform.position;
+        
     }
 }

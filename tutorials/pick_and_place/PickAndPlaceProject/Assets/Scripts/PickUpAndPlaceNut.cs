@@ -9,8 +9,10 @@ public class PickUpAndPlaceNut : MonoBehaviour
     public GameObject nutRepresentation;
     public Slider nut_progress;
     public Object grabable;
+    public float time;
     private float sliderProgress = 0;
     private bool isPickUp = true;
+
 
 
     private void Update()
@@ -51,7 +53,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
         {
             if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color && other.transform.childCount == 0)
             {
-                sliderProgress += Time.deltaTime / 3f;
+                sliderProgress += Time.deltaTime / time;
                 nut_progress.value = sliderProgress;
             }                      
         }
