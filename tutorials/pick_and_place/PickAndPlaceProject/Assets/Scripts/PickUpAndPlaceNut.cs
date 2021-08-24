@@ -58,13 +58,16 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
         if (sliderProgress >= 1)
         {
-            
+            Destroy(grabable);
             isPickUp = false;
             resetProgress();
             
             GameObject screw = other.transform.gameObject;
             GameObject nut = Instantiate(nutRepresentation);
             nut.GetComponent<Renderer>().material = this.GetComponent<Renderer>().material;
+
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().isKinematic = true;
 
             nut.transform.parent = null;
             nut.transform.position = screw.transform.position;
@@ -82,7 +85,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
                 
             }
 
-            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
 
     }
