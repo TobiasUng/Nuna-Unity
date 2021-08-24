@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5239382955865039611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2066065265962972507}
+  m_Layer: 0
+  m_Name: Attach Offset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2066065265962972507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239382955865039611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 210999229904548461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7141957333699949038
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +62,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.7624235, z: 1.296}
   m_LocalScale: {x: 1.38, y: 1.38, z: 1.38}
-  m_Children: []
+  m_Children:
+  - {fileID: 2066065265962972507}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,6 +161,22 @@ MonoBehaviour:
   nutRepresentation: {fileID: 7141957333699949038, guid: a232d6dbdf3b53a49b383023a737e0dc, type: 3}
   nut_progress: {fileID: 0}
   grabable: {fileID: -1980759425966409832}
+  time: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2648782515111114775, guid: fada28327a169f0449a7c32e7f8b48f4, type: 3}
+        m_TargetAssemblyTypeName: WallConfig, Assembly-CSharp
+        m_MethodName: checkScrews
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-1980759425966409832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +222,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 2066065265962972507}
   m_AttachEaseInTime: 0.15
   m_MovementType: 1
   m_TrackPosition: 1

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScrewPlacement : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class ScrewPlacement : MonoBehaviour
     public GameObject playerCamera;
 
     private Material screwColor;
+
+    public UnityEvent onDestroy;
+
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +91,8 @@ public class ScrewPlacement : MonoBehaviour
             
             Destroy(screw);
             feedback.stopFeedback();
+
+            onDestroy.Invoke();
         }
     }
 

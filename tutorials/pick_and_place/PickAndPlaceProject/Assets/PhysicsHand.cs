@@ -47,4 +47,16 @@ public class PhysicsHand : MonoBehaviour
         q.ToAngleAxis(out float angle, out Vector3 axis);
         body.angularVelocity = axis * (angle * Mathf.Deg2Rad * rotateSpeed);
     }
+
+    public void makeTransparent()
+    {
+        Color color = this.GetComponent<Renderer>().material.color;
+        this.GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 0.5f);
+    }
+
+    public void makeOpaque()
+    {
+        Color color = this.GetComponent<Renderer>().material.color;
+        this.GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 1f);
+    }
 }

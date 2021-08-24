@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PickUpAndPlaceNut : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
     private float sliderProgress = 0;
     private bool isPickUp = true;
 
-
+    public UnityEvent onDestroy;
 
     private void Update()
     {
@@ -81,6 +82,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
             Transform row = screwPlacement.parent;
             
             Destroy(screwPlacement.gameObject);
+            onDestroy.Invoke();
             if (row.childCount == 0)
             {
                 Destroy(row.gameObject);
