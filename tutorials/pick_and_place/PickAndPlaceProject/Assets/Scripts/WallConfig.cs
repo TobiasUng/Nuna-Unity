@@ -6,4 +6,6 @@ public class WallConfig : MonoBehaviour
 {
     public IFeedback feedback;
     public GameObject playerCamera;
+    public GameObject publisher;
+    public GameObject screwSpawner;
 }

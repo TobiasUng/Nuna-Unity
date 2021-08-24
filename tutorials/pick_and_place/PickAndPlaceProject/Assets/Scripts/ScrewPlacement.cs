@@ -17,6 +17,8 @@ public class ScrewPlacement : MonoBehaviour
     {
         feedback = transform.root.GetComponent<WallConfig>().feedback;
         playerCamera = transform.root.GetComponent<WallConfig>().playerCamera;
+        publisher = transform.root.GetComponent<WallConfig>().publisher;
+        screwSpawner = transform.root.GetComponent<WallConfig>().screwSpawner;
     }
 
     private void Update()

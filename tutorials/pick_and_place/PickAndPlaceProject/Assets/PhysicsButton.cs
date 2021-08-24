@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR;
 
 public class PhysicsButton : MonoBehaviour
 {
@@ -13,9 +14,21 @@ public class PhysicsButton : MonoBehaviour
     private ConfigurableJoint joint;
 
     public UnityEvent onPressed, onReleased;
+    InputDevice rightController;
+    InputDevice leftController;
     // Start is called before the first frame update
     void Start()
     {
+
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+        rightController = devices[0];
+
+        InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(leftControllerCharacteristics, devices);
+        leftController = devices[0];
+
         startPos = transform.localPosition;
         joint = GetComponent<ConfigurableJoint>();
     }
@@ -43,6 +56,10 @@ public class PhysicsButton : MonoBehaviour
         isPressed = true;
         onPressed.Invoke();
         Debug.Log("Pressed");
+
+        leftController.SendHapticImpulse(0u, 0.5f, 0.1f);
+        rightController.SendHapticImpulse(0u, 0.5f, 0.1f);
+
     }
 
     private void Released()

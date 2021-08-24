@@ -24,6 +24,8 @@ public class PhysicsHand : MonoBehaviour
 
         body.position = followTarget.position;
         body.rotation = followTarget.rotation;
+
+        
     }
 
     // Update is called once per frame
