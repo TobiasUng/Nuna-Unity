@@ -17,7 +17,13 @@ public class VisualFeedbackPulse : IPulseFeedback
     {
         
         //stereoPan = angle;
-        if (angle < 0)
+        if(angle < 0.07 && angle > -0.07)
+        {
+            indicator_L.color = new Color(indicator_L.color.r, indicator_L.color.g, indicator_L.color.b, 1);
+            indicator_R.color = new Color(indicator_R.color.r, indicator_R.color.g, indicator_R.color.b, 1);
+        }
+
+        else if (angle < 0)
         {
 
             indicator_L.color = new Color(indicator_L.color.r, indicator_L.color.g, indicator_L.color.b, Mathf.Abs(angle));

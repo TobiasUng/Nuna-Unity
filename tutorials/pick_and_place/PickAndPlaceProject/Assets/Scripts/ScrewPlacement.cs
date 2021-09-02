@@ -21,7 +21,11 @@ public class ScrewPlacement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        feedback = transform.root.GetComponent<WallConfig>().feedback;
+        if(feedback == null)
+        {
+            feedback = transform.root.GetComponent<WallConfig>().feedback;
+        }
+        
         playerCamera = transform.root.GetComponent<WallConfig>().playerCamera;
         publisher = transform.root.GetComponent<WallConfig>().publisher;
         screwSpawner = transform.root.GetComponent<WallConfig>().screwSpawner;
@@ -32,7 +36,7 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(screw != null) // TODO publisher.GetComponent<TrajectoryPlanner>().isExecuting
         {
-            feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, screw.transform), gameObject.transform.GetChild(0).gameObject);
+            feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, this.transform.GetChild(0).transform), gameObject.transform.GetChild(0).gameObject);
 
             if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting)
             {

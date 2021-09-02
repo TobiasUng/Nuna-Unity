@@ -7,9 +7,9 @@ public class RumbleFeedbackContinuous : IContinuousFeedback
 {
 
     InputDevice rightController;
-    float rightRumble;
-    InputDevice leftController;
-    float leftRumble;
+    public float rightRumble;
+    public InputDevice leftController;
+    public float leftRumble;
 
     private void Start()
     {
@@ -26,21 +26,31 @@ public class RumbleFeedbackContinuous : IContinuousFeedback
     public override void giveFeedback(float distance, float angle, GameObject placement)
     {
 
-        if (initDistance == null)
+        if (initDistance == null || distance > initDistance)
         {
             initDistance = distance;
         }
 
-        if(angle < 0)
+        if (angle < 0.07 && angle > -0.07)
         {
-            rightRumble = mapToZeroOne(Mathf.Min(1, distance), 0, (float)initDistance) * angle;
+            leftRumble = rightRumble = Mathf.Max(mapToZeroOne(distance, 0, (float)initDistance), 0.1f);
+            
+        }
+
+        else if(angle > 0)
+        {
+                        
+            rightRumble = Mathf.Max(mapToZeroOne(distance, 0, (float) initDistance), 0.1f);
+            //rightRumble = 0.5f;
             leftRumble = 0;
         }
 
         else
         {
             rightRumble = 0;
-            leftRumble = Mathf.Abs(mapToZeroOne(Mathf.Min(1, distance), 0, (float)initDistance) * -angle);
+
+            //leftRumble = 0.5f;
+            leftRumble = Mathf.Max(mapToZeroOne(distance, 0, (float)initDistance), 0.1f);
         }
 
         if (rightController != null && leftController != null)
@@ -56,12 +66,11 @@ public class RumbleFeedbackContinuous : IContinuousFeedback
     {
         //hiFreq = Mathf.Min(1, distance);
         
-        leftRumble = Mathf.Pow(leftRumble, 3);
-        rightRumble = Mathf.Pow(rightRumble, 3);
+        
         leftController.StopHaptics();
         rightController.StopHaptics();
-        leftController.SendHapticImpulse(0u, leftRumble);
-        rightController.SendHapticImpulse(0u, rightRumble);
+        leftController.SendHapticImpulse(0u, leftRumble, Time.deltaTime);
+        rightController.SendHapticImpulse(0u, rightRumble, Time.deltaTime);
         
     }
 

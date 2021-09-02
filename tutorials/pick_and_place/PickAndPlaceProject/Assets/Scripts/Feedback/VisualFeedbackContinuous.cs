@@ -22,7 +22,8 @@ public class VisualFeedbackContinuous: IContinuousFeedback
     public override void continuous(float distance, GameObject placement)
     {
         Vector3 placementScale = placement.transform.localScale;
-        circleIndicator.transform.localScale = new Vector3(distance * 10 + placementScale.x, 0.1f, distance * 10 + placementScale.z);
+        //circleIndicator.transform.localScale = new Vector3(distance + placementScale.x, 0.1f, distance  + placementScale.z);
+        circleIndicator.transform.localScale = new Vector3(distance * 2, 0.1f, distance * 2);
     }
 
     public override void stopFeedback()

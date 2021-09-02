@@ -47,15 +47,22 @@ public class RumbleFeedbackPulse : IPulseFeedback
     public override void giveFeedback(float distance, float angle, GameObject placement)
     {
 
-        if(angle > 0)
+
+        if (angle < 0.07 && angle > -0.07)
+        {
+            leftRumble = 0.5f;
+            rightRumble = 0.5f;
+        }
+
+        else if (angle > 0)
         {
             leftRumble = 0;
-            rightRumble = 1;
+            rightRumble = 0.5f;
         }
 
         else
         {
-            leftRumble = 1;
+            leftRumble = 0.5f;
             rightRumble = 0;
         }
 
