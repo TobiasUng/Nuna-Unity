@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomColor : MonoBehaviour
+public class ScrewCollision : MonoBehaviour
 {
 
-    public Material[] colors;
+    
     
 
     // Start is called before the first frame update
