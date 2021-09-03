@@ -8,6 +8,9 @@ using RosMessageTypes.Geometry;
 
 public class TrajectoryPlanner : MonoBehaviour
 {
+
+    public float idleTime = 0f;
+    public bool hasStarted = false;
     // ROS Connector
     private ROSConnection ros;
 
@@ -52,6 +55,15 @@ public class TrajectoryPlanner : MonoBehaviour
         PickUp,
         Place
     };
+
+
+    private void Update()
+    {
+        if (!isExecuting && hasStarted)
+        {
+            idleTime += Time.deltaTime;
+        }
+    }
 
     /// <summary>
     ///     Close the gripper
@@ -111,6 +123,7 @@ public class TrajectoryPlanner : MonoBehaviour
     public void PublishJoints()
     {
         isExecuting = true;
+        hasStarted = true;
         isPickUp = true;
 
         MMoverServiceRequest request = new MMoverServiceRequest();

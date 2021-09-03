@@ -221,15 +221,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347068777825885228, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.052104536
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5347068777825885228, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.10420907
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 5347068777825885228, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.052104536
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379192061028867674, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9031655500313856076, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
       propertyPath: m_Name
@@ -457,18 +461,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &22941689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22941687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c16315e456a35a478bb4a6c93c5b9b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &30400344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,6 +3845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 0}
@@ -10415,6 +10409,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46398bc5d6905ad429a6d2d973afe002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1145164042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 246011696352196477, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
+  m_PrefabInstance: {fileID: 246011696241836263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1145164045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145164042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d714e5612ad9e214ba0d238c7ca0b7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  publisher: {fileID: 177655887}
+  playerPosCurrent: {fileID: 591381270}
+  playerPosPrevious: {x: 0, y: 0, z: 0}
+  robotIdleTime: 0
+  distanceMoved: 0
 --- !u!1 &1153984722
 GameObject:
   m_ObjectHideFlags: 0
@@ -12070,7 +12086,7 @@ Transform:
   m_GameObject: {fileID: 1552524232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.498, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 0.7}
+  m_LocalScale: {x: 0.4, y: 1, z: 0.4}
   m_Children: []
   m_Father: {fileID: 591381270}
   m_RootOrder: 1
@@ -16237,6 +16253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 5601983281457459980}
@@ -16422,6 +16440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 1099738116}
@@ -16506,11 +16526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8194015312751715583, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.171
       objectReference: {fileID: 0}
     - target: {fileID: 8194015312751715583, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.018
+      value: 2.853
       objectReference: {fileID: 0}
     - target: {fileID: 8194015312751715583, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -16673,6 +16693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 756796086}
@@ -17077,6 +17099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 2075199587}
