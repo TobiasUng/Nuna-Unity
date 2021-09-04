@@ -6,7 +6,7 @@ public class PhysicsHand : MonoBehaviour
 {
 
     [SerializeField] private GameObject followObject;
-    [SerializeField] private float followSpeed = 30f;
+    [SerializeField] private float followSpeed = 100f;
     [SerializeField] private float rotateSpeed = 100f;
     [SerializeField] private Vector3 positionOffset;
     [SerializeField] private Vector3 rotationOffset;
@@ -16,6 +16,7 @@ public class PhysicsHand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         followTarget = followObject.transform;
         body = GetComponent<Rigidbody>();
         body.collisionDetectionMode = CollisionDetectionMode.Continuous;
@@ -32,6 +33,9 @@ public class PhysicsHand : MonoBehaviour
     void Update()
     {
         PhysicsMove();
+        //body.position = followTarget.position;
+        //body.rotation = followTarget.rotation;
+        //
     }
 
     private void PhysicsMove()

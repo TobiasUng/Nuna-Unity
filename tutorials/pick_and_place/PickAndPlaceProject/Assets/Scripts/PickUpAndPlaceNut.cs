@@ -61,6 +61,9 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
         if (sliderProgress >= 1)
         {
+            //PlayerStats.saveToJson();
+            PlayerStats.pilotStats.completionTime = Time.realtimeSinceStartup - PlayerStats.startTime;
+
             Destroy(grabable);
             isPickUp = false;
             resetProgress();

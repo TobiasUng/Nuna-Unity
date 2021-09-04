@@ -63,6 +63,14 @@ public class TrajectoryPlanner : MonoBehaviour
         {
             idleTime += Time.deltaTime;
         }
+
+        if (hasStarted)
+        {
+            if(PlayerStats.startTime == 0)
+            {
+                PlayerStats.startTime = Time.realtimeSinceStartup;
+            }
+        }
     }
 
     /// <summary>
@@ -237,6 +245,8 @@ public class TrajectoryPlanner : MonoBehaviour
             // All trajectories have been executed, open the gripper to place the target cube
             OpenGripper();
             isExecuting = false;
+            PlayerStats.pilotStats.robotIdleTime = idleTime;
+            
         }
     }
 

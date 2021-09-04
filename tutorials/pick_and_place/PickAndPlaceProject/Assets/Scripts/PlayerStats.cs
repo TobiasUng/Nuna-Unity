@@ -1,27 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
 
-    public GameObject publisher;
-    public Transform playerPosCurrent;
-    public Vector3 playerPosPrevious;
+    [SerializeField] public static PilotStats pilotStats = new PilotStats();
+    public static string fileName;
+    public static float startTime;
+    public static float endTime;
+
+
+    private void Start()
+    {
+        fileName = SceneManager.GetActiveScene().name + "_" + System.DateTime.Now + ".json";
+        fileName = fileName.Replace(" ", "_");
+        fileName = fileName.Replace(":", ".");
+    }
+
+    private void Update()
+    {
+        
+    }
+
+    public static void saveToJson()
+    {
+       
+        string statsJson = JsonUtility.ToJson(pilotStats);
+        Debug.Log(Application.dataPath);
+        System.IO.File.WriteAllText(Application.dataPath + "/StudyResults/" + fileName, statsJson);
+
+    }
+
+    private void OnApplicationQuit()
+    {
+        Debug.Log("Exit");
+        saveToJson();
+    }
+
+
+    
+}
+
+[System.Serializable]
+public class PilotStats
+{
     public float robotIdleTime = 0f;
     public float distanceMoved = 0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerPosPrevious = playerPosCurrent.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        distanceMoved += Vector3.Distance(playerPosCurrent.position, playerPosPrevious);
-        playerPosPrevious = playerPosCurrent.position;
-
-    }
+    public float avarageScrewDistance = 0f;
+    public float completionTime = 0f;
+    public int errors = 0;
 }
+
+
