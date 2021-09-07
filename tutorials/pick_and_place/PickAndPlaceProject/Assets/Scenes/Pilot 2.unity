@@ -3585,6 +3585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 0}
@@ -12238,7 +12240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff3cb343c59bbb4f97c4d8fe31ce112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feedback: {fileID: 1005918467}
+  feedbacks:
+  - {fileID: 1930260274}
+  - {fileID: 1907695220}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}
   screwSpawner: {fileID: 521436320}
@@ -13558,6 +13562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6678a78179090c40a82523189cd8ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightRumble: 0
+  leftRumble: 0
 --- !u!1 &1931076383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3320088957321456677, guid: 58f948edde5e84391b46117cdc69668a, type: 3}
@@ -14923,6 +14929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 5601983281457459980}
@@ -15108,6 +15116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 1099738116}
@@ -15359,6 +15369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 756796086}
@@ -15759,6 +15771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f09b626a301a9c43a9e46adc60be542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleTime: 0
+  hasStarted: 0
   rosServiceName: niryo_moveit
   niryoOne: {fileID: 1576327311}
   target: {fileID: 2075199587}
