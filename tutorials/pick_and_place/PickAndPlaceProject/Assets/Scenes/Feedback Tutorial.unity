@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &35263022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3103,6 +3103,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -3132,6 +3136,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1582955452}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1582955452}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -3184,7 +3192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023143982559847613, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000005509124
+      value: -0.0000008814598
       objectReference: {fileID: 0}
     - target: {fileID: 8377404427290563752, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_Name
@@ -3773,6 +3781,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -3802,6 +3814,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1930260274}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1930260274}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -5681,6 +5697,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -5710,6 +5730,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1907695220}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1907695220}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -7597,6 +7621,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -7626,6 +7654,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1005918467}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1005918467}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -8247,6 +8279,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -8276,6 +8312,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 689362467}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 689362467}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -9386,6 +9426,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -9415,6 +9459,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1907695220}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1907695220}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -10642,6 +10690,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -10671,6 +10723,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 608323767}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 608323767}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -10723,7 +10779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023143982559847613, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000005509124
+      value: -0.0000008814598
       objectReference: {fileID: 0}
     - target: {fileID: 8377404427290563752, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_Name
@@ -11932,7 +11988,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576327311}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95e23a573245a69419230f1aac34605a, type: 3}
   m_Name: 
@@ -12894,6 +12950,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -12923,6 +12983,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1005918467}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1005918467}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -13268,7 +13332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff3cb343c59bbb4f97c4d8fe31ce112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feedback: {fileID: 1005918467}
+  feedbacks:
+  - {fileID: 1582955452}
+  - {fileID: 1907695220}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}
   screwSpawner: {fileID: 521436320}
@@ -13489,6 +13555,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -13518,6 +13588,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 608323767}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 608323767}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -13570,7 +13644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023143982559847613, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000005509124
+      value: -0.0000008814598
       objectReference: {fileID: 0}
     - target: {fileID: 8377404427290563752, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_Name
@@ -14181,6 +14255,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -14210,6 +14288,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1930260274}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1930260274}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -14322,6 +14404,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -14351,6 +14437,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 689362467}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 689362467}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -14383,7 +14473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15760,6 +15850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 246011696352196477, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
 --- !u!23 &850690186743730464
@@ -16494,6 +16588,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: screwSpawner
       value: 
       objectReference: {fileID: 521436320}
@@ -16523,6 +16621,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: feedback
+      value: 
+      objectReference: {fileID: 1582955452}
+    - target: {fileID: 1335913298389312393, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
+      propertyPath: feedbacks.Array.data[0]
       value: 
       objectReference: {fileID: 1582955452}
     - target: {fileID: 1597668223406960522, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
@@ -16575,7 +16677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023143982559847613, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000005509124
+      value: -0.0000008814598
       objectReference: {fileID: 0}
     - target: {fileID: 8377404427290563752, guid: 9c0eab8cb50814343bf0d90305036183, type: 3}
       propertyPath: m_Name

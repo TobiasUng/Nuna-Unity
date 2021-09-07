@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WallConfig : MonoBehaviour
 {
-    public IFeedback feedback;
+    public IFeedback[] feedbacks;
     public GameObject playerCamera;
     public GameObject publisher;
     public GameObject screwSpawner;

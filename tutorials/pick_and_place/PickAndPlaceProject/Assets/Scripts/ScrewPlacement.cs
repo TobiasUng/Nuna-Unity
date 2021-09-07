@@ -10,7 +10,7 @@ public class ScrewPlacement : MonoBehaviour
     public GameObject screw;
     public GameObject screwRepresentation;
     public GameObject publisher;
-    public IFeedback feedback;
+    public IFeedback[] feedbacks;
     public GameObject playerCamera;
 
     private Material screwColor;
@@ -21,9 +21,9 @@ public class ScrewPlacement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(feedback == null)
+        if(feedbacks.Length == 0)
         {
-            feedback = transform.root.GetComponent<WallConfig>().feedback;
+            feedbacks = transform.root.GetComponent<WallConfig>().feedbacks;
         }
         
         playerCamera = transform.root.GetComponent<WallConfig>().playerCamera;
@@ -36,7 +36,11 @@ public class ScrewPlacement : MonoBehaviour
     {
         if(screw != null) // TODO publisher.GetComponent<TrajectoryPlanner>().isExecuting
         {
-            feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, this.transform.GetChild(0).transform), gameObject.transform.GetChild(0).gameObject);
+            foreach(IFeedback feedback in feedbacks)
+            {
+                feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, this.transform.GetChild(0).transform), gameObject.transform.GetChild(0).gameObject);
+            }
+            
 
             if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting)
             {
@@ -94,7 +98,12 @@ public class ScrewPlacement : MonoBehaviour
             }*/
             
             Destroy(screw);
-            feedback.stopFeedback();
+
+            foreach (IFeedback feedback in feedbacks)
+            {
+                feedback.stopFeedback();
+            }
+            
 
             onDestroy.Invoke();
         }
