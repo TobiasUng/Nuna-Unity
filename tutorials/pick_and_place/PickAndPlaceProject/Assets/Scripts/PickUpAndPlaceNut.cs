@@ -54,6 +54,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
         {
             if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color && other.transform.childCount == 0)
             {
+                nut_progress.gameObject.SetActive(true);
                 sliderProgress += Time.deltaTime / time;
                 nut_progress.value = sliderProgress;
             }                      
@@ -64,6 +65,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
             //PlayerStats.saveToJson();
             PlayerStats.pilotStats.completionTime = Time.realtimeSinceStartup - PlayerStats.startTime;
             PlayerStats.pilotStats.nutsPlaced++;
+            nut_progress.gameObject.SetActive(false);
 
             Destroy(grabable);
             isPickUp = false;
@@ -102,6 +104,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("screw") && isPickUp)
         {
+            nut_progress.gameObject.SetActive(false);
             resetProgress();
         }
     }
