@@ -13,7 +13,7 @@ public class WallConfig : MonoBehaviour
     public SortedDictionary<string, Transform> screwPlacementsMap = new SortedDictionary<string, Transform>();
     public List<Transform> screwPlacements = new List<Transform>();
 
-    private void Start()
+    void Start()
     {
         checkScrews();
     }

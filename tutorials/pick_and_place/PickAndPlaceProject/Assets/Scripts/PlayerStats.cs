@@ -12,14 +12,14 @@ public class PlayerStats : MonoBehaviour
     public static float endTime;
 
 
-    private void Start()
+    void Start()
     {
         fileName = SceneManager.GetActiveScene().name + "_" + System.DateTime.Now + ".json";
         fileName = fileName.Replace(" ", "_");
         fileName = fileName.Replace(":", ".");
     }
 
-    private void Update()
+    void Update()
     {
         
     }
@@ -50,7 +50,9 @@ public class PilotStats
     public float distanceMoved = 0f;
     public float avarageScrewDistance = 0f;
     public float completionTime = 0f;
+    public int dangerErrors = 0;
     public int errors = 0;
+    public int nutsPlaced = 0;
 }
 
 

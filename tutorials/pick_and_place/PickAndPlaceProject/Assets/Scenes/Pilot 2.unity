@@ -11102,7 +11102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576327311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95e23a573245a69419230f1aac34605a, type: 3}
   m_Name: 
@@ -12241,7 +12241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbacks:
-  - {fileID: 1930260274}
+  - {fileID: 689362467}
   - {fileID: 1907695220}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}

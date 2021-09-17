@@ -16,7 +16,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
     public UnityEvent onDestroy;
 
-    private void Update()
+    void Update()
     {
         
     }
@@ -63,6 +63,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
         {
             //PlayerStats.saveToJson();
             PlayerStats.pilotStats.completionTime = Time.realtimeSinceStartup - PlayerStats.startTime;
+            PlayerStats.pilotStats.nutsPlaced++;
 
             Destroy(grabable);
             isPickUp = false;

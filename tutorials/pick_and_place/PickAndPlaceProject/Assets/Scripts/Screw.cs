@@ -9,6 +9,8 @@ public class Screw : MonoBehaviour
     public UnityEvent onStart;
     public float distanceToPlayer;
     public float dangerDistance = 0.4f;
+    public float duration = 10f;
+    public float time = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class Screw : MonoBehaviour
 
         if (distanceToPlayer <= dangerDistance)
         {
-            PlayerStats.pilotStats.errors++;
+            PlayerStats.pilotStats.dangerErrors++;
             GetComponent<AudioSource>().Play();
         }
         onStart.Invoke();
@@ -37,7 +39,12 @@ public class Screw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time += Time.deltaTime;
+        if (time > duration)
+        {
+            Destroy(this.gameObject);
+            PlayerStats.pilotStats.errors++;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
