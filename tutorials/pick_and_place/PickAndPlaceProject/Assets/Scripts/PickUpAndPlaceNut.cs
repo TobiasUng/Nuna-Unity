@@ -57,6 +57,8 @@ public class PickUpAndPlaceNut : MonoBehaviour
                 nut_progress.gameObject.SetActive(true);
                 sliderProgress += Time.deltaTime / time;
                 nut_progress.value = sliderProgress;
+                
+
             }                      
         }
 
@@ -72,6 +74,8 @@ public class PickUpAndPlaceNut : MonoBehaviour
             resetProgress();
             
             GameObject screw = other.transform.gameObject;
+            screw.GetComponent<Screw>().isFixed = true;
+            screw.GetComponent<Screw>().isFixed = true;
             GameObject nut = Instantiate(nutRepresentation);
             nut.GetComponent<Renderer>().material = this.GetComponent<Renderer>().material;
 
@@ -109,8 +113,9 @@ public class PickUpAndPlaceNut : MonoBehaviour
         }
     }
 
-    private void resetProgress()
+    public void resetProgress()
     {
+        nut_progress.gameObject.SetActive(false);
         sliderProgress = 0;
         nut_progress.value = sliderProgress;
 

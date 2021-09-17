@@ -131,6 +131,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   distanceToPlayer: 0
+  dangerDistance: 0.4
+  duration: 8
+  time: 0
 --- !u!82 &8379192061028867674
 AudioSource:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class Screw : MonoBehaviour
     public float dangerDistance = 0.4f;
     public float duration = 10f;
     public float time = 0f;
+    public GameObject nut = null;
+    public bool isFixed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,18 +42,32 @@ public class Screw : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > duration)
+        if (time > duration && !isFixed)
         {
+            if(nut != null)
+            {
+                Destroy(nut);
+                nut.GetComponent<PickUpAndPlaceNut>().resetProgress();
+            }
             Destroy(this.gameObject);
             PlayerStats.pilotStats.errors++;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        /*if(other.gameObject.tag == "Player")
+        if (other.gameObject.layer == LayerMask.NameToLayer("nut"))
         {
-            GetComponent<AudioSource>().Play();
-        }*/
+            if (this.GetComponent<Renderer>().material.color == other.GetComponent<Renderer>().material.color)
+            {
+                nut = other.gameObject;
+            }
+                
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        nut = null;
     }
 }

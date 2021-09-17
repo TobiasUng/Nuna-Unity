@@ -50,9 +50,11 @@ public class PilotStats
     public float distanceMoved = 0f;
     public float avarageScrewDistance = 0f;
     public float completionTime = 0f;
+    public float responseTime = 0f;
     public int dangerErrors = 0;
     public int errors = 0;
     public int nutsPlaced = 0;
+
 }
 
 

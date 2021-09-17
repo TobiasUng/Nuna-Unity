@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &35263022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,8 +2944,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 500, y: 0}
+  m_AnchoredPosition: {x: 350, y: 0}
+  m_SizeDelta: {x: 700, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110195078
 MonoBehaviour:
@@ -9115,8 +9115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 500, y: 0}
+  m_AnchoredPosition: {x: -350, y: 0}
+  m_SizeDelta: {x: 700, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153984724
 MonoBehaviour:
@@ -11887,8 +11887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbacks:
-  - {fileID: 1907695220}
-  - {fileID: 608323767}
+  - {fileID: 1005918467}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}
   screwSpawner: {fileID: 521436320}
@@ -14115,7 +14114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246011696352196477, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 246011697391652863, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_Radius
@@ -14449,6 +14448,10 @@ PrefabInstance:
       propertyPath: positionOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5219546950121130594, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
+      propertyPath: followSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7451667671018500664, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: followObject
       value: 
@@ -14460,6 +14463,10 @@ PrefabInstance:
     - target: {fileID: 7451667671018500664, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: positionOffset.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451667671018500664, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
+      propertyPath: followSpeed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8194015312751715583, guid: dad47b3affcdd254ca1e1f0b07ee2ce4, type: 3}
       propertyPath: m_LocalPosition.x
