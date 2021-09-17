@@ -15,6 +15,11 @@ public class WallConfig : MonoBehaviour
 
     void Start()
     {
+        foreach(var feedback in feedbacks)
+        {
+            Debug.Log(feedback.gameObject.name);
+            PlayerStats.pilotStats.feedbacks.Add(feedback.gameObject.name);
+        }
         checkScrews();
     }
 

@@ -14,8 +14,10 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        fileName = SceneManager.GetActiveScene().name + "_" + System.DateTime.Now + ".json";
-        fileName = fileName.Replace(" ", "_");
+        /*fileName = SceneManager.GetActiveScene().name + "_" + System.DateTime.Now + ".json";
+        fileName = fileName.Replace(" ", "_");*/
+        fileName = SceneManager.GetActiveScene().name + " " + System.DateTime.Now + ".json";
+        fileName = fileName.Replace("/", "_");
         fileName = fileName.Replace(":", ".");
     }
 
@@ -54,6 +56,7 @@ public class PilotStats
     public int dangerErrors = 0;
     public int errors = 0;
     public int nutsPlaced = 0;
+    public List<string> feedbacks = new List<string>();
 
 }
 

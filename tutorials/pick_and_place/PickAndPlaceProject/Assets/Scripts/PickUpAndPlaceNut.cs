@@ -75,7 +75,19 @@ public class PickUpAndPlaceNut : MonoBehaviour
             
             GameObject screw = other.transform.gameObject;
             screw.GetComponent<Screw>().isFixed = true;
-            screw.GetComponent<Screw>().isFixed = true;
+
+            if(PlayerStats.pilotStats.responseTime <= 0f)
+            {
+                PlayerStats.pilotStats.responseTime = PlayerStats.pilotStats.responseTime + (screw.GetComponent<Screw>().time - time);
+            }
+
+            else
+            {
+                PlayerStats.pilotStats.responseTime = (PlayerStats.pilotStats.responseTime + (screw.GetComponent<Screw>().time - time))/2;
+            }
+            //PlayerStats.pilotStats.responseTime = PlayerStats.pilotStats.responseTime + screw.GetComponent<Screw>().time / PlayerStats.pilotStats.nutsPlaced;
+
+
             GameObject nut = Instantiate(nutRepresentation);
             nut.GetComponent<Renderer>().material = this.GetComponent<Renderer>().material;
 
