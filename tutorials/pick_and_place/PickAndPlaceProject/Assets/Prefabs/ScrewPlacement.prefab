@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597668223406960522}
   m_Layer: 7
-  m_Name: ScrewPlacement (1) 2
+  m_Name: ScrewPlacement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,8 +144,11 @@ MonoBehaviour:
   screw: {fileID: 0}
   screwRepresentation: {fileID: 9031655500313856076, guid: 4980d88e8d61a2e47bf7a44cab339a7c, type: 3}
   publisher: {fileID: 0}
-  feedback: {fileID: 0}
+  feedbacks: []
   playerCamera: {fileID: 0}
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7984049294191387275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,6 +156,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7527695076905031517}
     m_Modifications:
+    - target: {fileID: 8277242502460841653, guid: c98dab431fb8e6c40a4d0903895e1dd1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1238935514984134736, guid: 15cee8e9a572d84439e7ef09dc0061f1, type: 3}
     - target: {fileID: 8277242502487901737, guid: c98dab431fb8e6c40a4d0903895e1dd1, type: 3}
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -183,11 +190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8277242502487901750, guid: c98dab431fb8e6c40a4d0903895e1dd1, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.3200063
+      value: 1.3199999
       objectReference: {fileID: 0}
     - target: {fileID: 8277242502487901750, guid: c98dab431fb8e6c40a4d0903895e1dd1, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000005509124
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8277242502487901750, guid: c98dab431fb8e6c40a4d0903895e1dd1, type: 3}
       propertyPath: m_YMotion
