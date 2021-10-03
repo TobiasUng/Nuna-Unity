@@ -6,8 +6,8 @@ public class PhysicsHand : MonoBehaviour
 {
 
     [SerializeField] private GameObject followObject;
-    [SerializeField] private float followSpeed = 100f;
-    [SerializeField] private float rotateSpeed = 100f;
+    private float followSpeed = 30f;
+    private float rotateSpeed = 100f;
     [SerializeField] private Vector3 positionOffset;
     [SerializeField] private Vector3 rotationOffset;
 

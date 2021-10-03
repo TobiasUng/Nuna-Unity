@@ -31,7 +31,7 @@ public class RumbleFeedbackContinuous : IContinuousFeedback
             initDistance = distance;
         }
 
-        if (angle < 0.07 && angle > -0.07)
+        if (angle < 0.1 && angle > -0.1)
         {
             leftRumble = rightRumble = Mathf.Max(mapToZeroOne(distance, 0, (float)initDistance), 0.1f);
             

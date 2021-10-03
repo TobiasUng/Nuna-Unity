@@ -38,7 +38,8 @@ public class ScrewPlacement : MonoBehaviour
         {
             foreach(IFeedback feedback in feedbacks)
             {
-                feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, this.transform.GetChild(0).transform), gameObject.transform.GetChild(0).gameObject);
+                if(feedback != null)
+                    feedback.giveFeedback(getDistance(), Angle.AngleDir(playerCamera.transform, this.transform.GetChild(0).transform), gameObject.transform.GetChild(0).gameObject);
             }
             
 

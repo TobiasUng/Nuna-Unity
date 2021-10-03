@@ -30,8 +30,27 @@ public class AudioFeedbackPulse : IPulseFeedback
     public override void giveFeedback(float distance, float angle, GameObject placement)
     {
         //stereoPan = angle;
-        
-        if (angle < 0)
+
+        audioSource.volume = Mathf.Abs(angle);
+
+        if (angle < 0.07 && angle > -0.07)
+        {
+            audioSource.panStereo = 0;
+            audioSource.volume = 1;
+        }
+
+        else if (angle > 0)
+        {
+            audioSource.panStereo = 1;
+        }
+
+        else
+        {
+            audioSource.panStereo = -1;
+        }
+
+
+        /*if (angle < 0)
         {
             audioSource.panStereo = Mathf.Pow(Mathf.Abs(angle), 1f / 3f) * (-1);
         }
@@ -39,7 +58,7 @@ public class AudioFeedbackPulse : IPulseFeedback
         else
         {
             audioSource.panStereo = Mathf.Pow(angle, 1f/3f);
-        }
+        }*/
         //audioSource.panStereo = angle;
         calcPulseStep(distance);
         pulsate();

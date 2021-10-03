@@ -98,6 +98,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
             nut.transform.position = screw.transform.position;
             nut.transform.rotation = Quaternion.identity;
             nut.transform.parent = screw.transform;
+            this.gameObject.SetActive(false);
 
             Transform screwPlacement = screw.transform.parent.parent;
             screw.transform.parent = null;
@@ -111,7 +112,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
                 
             }
 
-            this.gameObject.SetActive(false);
+            
         }
 
     }

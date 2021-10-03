@@ -18,6 +18,7 @@ public class Screw : MonoBehaviour
     {
         GameObject player = GameObject.Find("VR Camera");
         distanceToPlayer = Vector3.Distance(transform.position, new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+        PlayerStats.pilotStats.screwsPlaced++;
 
         if(PlayerStats.pilotStats.avarageScrewDistance == 0)
         {

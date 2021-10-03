@@ -11692,7 +11692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbacks:
-  - {fileID: 1005918467}
+  - {fileID: 0}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}
   screwSpawner: {fileID: 521436320}
@@ -13809,6 +13809,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4143462411665031346, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
+      propertyPath: participant
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 246011696352196475, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
