@@ -9,7 +9,7 @@ public class Screw : MonoBehaviour
     public UnityEvent onStart;
     public float distanceToPlayer;
     public float dangerDistance = 0.4f;
-    public float duration = 10f;
+    public float duration = 8f;
     public float time = 0f;
     public GameObject nut = null;
     public bool isFixed = false;
@@ -19,8 +19,9 @@ public class Screw : MonoBehaviour
         GameObject player = GameObject.Find("VR Camera");
         distanceToPlayer = Vector3.Distance(transform.position, new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
         PlayerStats.pilotStats.screwsPlaced++;
+        PlayerStats.pilotStats.completionTime = Time.realtimeSinceStartup - PlayerStats.startTime;
 
-        if(PlayerStats.pilotStats.avarageScrewDistance == 0)
+        if (PlayerStats.pilotStats.avarageScrewDistance == 0)
         {
             PlayerStats.pilotStats.avarageScrewDistance = distanceToPlayer;
         }
