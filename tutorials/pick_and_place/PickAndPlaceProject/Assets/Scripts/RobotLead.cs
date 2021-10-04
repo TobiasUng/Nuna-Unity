@@ -5,26 +5,46 @@ using UnityEngine;
 public class RobotLead : MonoBehaviour
 {
     public GameObject wall;
+    public GameObject screwPositions;
     //Transform[] rows;
-    public SortedDictionary<string, Transform> screwPlacementsMap = new SortedDictionary<string, Transform>();
-    public List<Transform> screwPlacements = new List<Transform>();
+    public SortedDictionary<string, Transform> screwPlacementsMapRobot = new SortedDictionary<string, Transform>();
+    public SortedDictionary<string, Transform> screwPositionsMapOperator = new SortedDictionary<string, Transform>();
+    public List<Transform> screwPlacementsRobot = new List<Transform>();
+    public List<Transform> screwPositionsOperator = new List<Transform>();
     public Stack<int> operationSequence = new Stack<int>();
     public GameObject publisher;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+
         /*wallSections = wall.GetComponentsInChildren<Transform>();
         Debug.Log(wallSections.Length);*/
-        foreach(Transform row in wall.transform)
+
+        foreach (Transform row in screwPositions.transform)
+        {
+            foreach (Transform placement in row.transform)
+            {
+                screwPositionsOperator.Add(placement);
+            }
+        }
+
+        foreach (Transform row in wall.transform)
         {
             foreach(Transform placement in row.transform)
             {
-                screwPlacements.Add(placement);
-                screwPlacementsMap.Add(row.tag + placement.GetSiblingIndex(), placement);
+
+                int i = Random.Range(0, screwPositionsOperator.Count);
+                Transform randomScrewPosition = screwPositionsOperator[i];
+                screwPositionsOperator.RemoveAt(i);
+                randomScrewPosition.parent = placement.GetChild(0);
+
+                screwPlacementsRobot.Add(placement);
+                screwPlacementsMapRobot.Add(row.tag + placement.GetSiblingIndex(), placement);
             }
         }
+
+        
 
         operationSequence = getOperationSequence();
     }
@@ -35,7 +55,7 @@ public class RobotLead : MonoBehaviour
         if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting && operationSequence.Count > 0)
         {
             int i = operationSequence.Pop();
-            screwPlacements[i].GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
+            screwPlacementsRobot[i].GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
         }
     }
 
@@ -43,7 +63,7 @@ public class RobotLead : MonoBehaviour
     private Stack<int> getOperationSequence()
     {
         List<int> placementIndices = new List<int>();
-        for(int i = 0; i < screwPlacements.Count; i++)
+        for(int i = 0; i < screwPlacementsRobot.Count; i++)
         {
             placementIndices.Add(i);
         }

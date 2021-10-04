@@ -13,7 +13,9 @@ public class VisualFeedbackContinuous: IContinuousFeedback
     {
         if (circleIndicator == null)
         {
-            circleIndicator = Instantiate(circlePrefab, placement.transform);
+            //circleIndicator = Instantiate(circlePrefab, placement.transform);
+            circleIndicator = Instantiate(circlePrefab);
+            circleIndicator.transform.position = placement.transform.position;
             //circleIndicator.transform.parent = placement.transform;
         }
         continuous(distance, placement);
@@ -23,7 +25,7 @@ public class VisualFeedbackContinuous: IContinuousFeedback
     {
         Vector3 placementScale = placement.transform.localScale;
         //circleIndicator.transform.localScale = new Vector3(distance + placementScale.x, 0.1f, distance  + placementScale.z);
-        circleIndicator.transform.localScale = new Vector3(distance * 2, 0.1f, distance * 2);
+        circleIndicator.transform.localScale = new Vector3(distance/2, 0.1f, distance/2);
     }
 
     public override void stopFeedback()
