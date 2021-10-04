@@ -11692,8 +11692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbacks:
-  - {fileID: 608323767}
-  - {fileID: 689362467}
   - {fileID: 1005918467}
   playerCamera: {fileID: 591381267}
   publisher: {fileID: 177655887}
