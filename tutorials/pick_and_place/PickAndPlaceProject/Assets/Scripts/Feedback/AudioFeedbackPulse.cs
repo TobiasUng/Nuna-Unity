@@ -33,7 +33,7 @@ public class AudioFeedbackPulse : IPulseFeedback
 
         audioSource.volume = Mathf.Abs(angle);
 
-        if (angle < 0.07 && angle > -0.07)
+        if (angle < deadZone && angle > -deadZone)
         {
             audioSource.panStereo = 0;
             audioSource.volume = 1;

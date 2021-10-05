@@ -48,7 +48,7 @@ public class RumbleFeedbackPulse : IPulseFeedback
     {
 
 
-        if (angle < 0.07 && angle > -0.07)
+        if (angle < deadZone && angle > -deadZone)
         {
             leftRumble = 0.5f;
             rightRumble = 0.5f;
