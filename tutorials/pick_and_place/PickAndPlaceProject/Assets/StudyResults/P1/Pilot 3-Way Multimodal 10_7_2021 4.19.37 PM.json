@@ -1,0 +1,18 @@
+{
+  "participant": "P1",
+  "scene": "Pilot 3-Way Multimodal",
+  "robotIdleTime": 0.18676719069480897,
+  "distanceMoved": 23.423263549804689,
+  "avarageScrewDistance": 0.8706294298171997,
+  "completionTime": 90.90734100341797,
+  "responseTime": 1.5864276885986329,
+  "dangerErrors": 0,
+  "errors": 1,
+  "screwsPlaced": 15,
+  "nutsPlaced": 14,
+  "feedbacks": [
+    "AudioPulse2",
+    "HapticPulse",
+    "VisualContinuous2"
+  ]
+}

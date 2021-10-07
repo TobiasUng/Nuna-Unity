@@ -1,0 +1,16 @@
+{
+  "participant": "P1",
+  "scene": "Pilot Visual",
+  "robotIdleTime": 0.20497599244117738,
+  "distanceMoved": 28.276636123657228,
+  "avarageScrewDistance": 1.3103444576263428,
+  "completionTime": 90.8822021484375,
+  "responseTime": 3.142476797103882,
+  "dangerErrors": 0,
+  "errors": 1,
+  "screwsPlaced": 15,
+  "nutsPlaced": 14,
+  "feedbacks": [
+    "VisualContinuous2"
+  ]
+}

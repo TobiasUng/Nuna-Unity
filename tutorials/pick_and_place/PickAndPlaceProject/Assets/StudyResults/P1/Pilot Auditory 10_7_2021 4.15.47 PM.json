@@ -1,0 +1,16 @@
+{
+  "participant": "P1",
+  "scene": "Pilot Auditory",
+  "robotIdleTime": 0.2011857032775879,
+  "distanceMoved": 23.160083770751954,
+  "avarageScrewDistance": 0.9421769380569458,
+  "completionTime": 88.6596908569336,
+  "responseTime": 1.879986047744751,
+  "dangerErrors": 0,
+  "errors": 0,
+  "screwsPlaced": 13,
+  "nutsPlaced": 13,
+  "feedbacks": [
+    "AudioPulse2"
+  ]
+}

@@ -13,6 +13,7 @@ public class RobotLead : MonoBehaviour
     public List<Transform> screwPositionsOperator = new List<Transform>();
     public Stack<int> operationSequence = new Stack<int>();
     public GameObject publisher;
+    public bool hasStarted = false;
     
     // Start is called before the first frame update
     void Start()
@@ -59,13 +60,20 @@ public class RobotLead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting && operationSequence.Count > 0)
-        {
-            int i = operationSequence.Pop();
-            screwPlacementsRobot[i].GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
-        }
+        
+         if (!publisher.GetComponent<TrajectoryPlanner>().isExecuting && operationSequence.Count > 0 && hasStarted)
+           {
+                int i = operationSequence.Pop();
+                screwPlacementsRobot[i].GetChild(0).GetComponent<ScrewPlacement>().moveScrewToPlacement();
+           }
+        
+        
     }
 
+    public void startOperation()
+    {
+        hasStarted = true;
+    }
 
     private Stack<int> getOperationSequence()
     {

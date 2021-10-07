@@ -1,0 +1,15 @@
+{
+  "participant": "P1",
+  "scene": "Tutorial",
+  "robotIdleTime": 0.10425969958305359,
+  "distanceMoved": 8.298988342285157,
+  "avarageScrewDistance": 0.5821150541305542,
+  "completionTime": 49.63753128051758,
+  "responseTime": 1.1685525178909302,
+  "dangerErrors": 0,
+  "errors": 2,
+  "screwsPlaced": 8,
+  "nutsPlaced": 6,
+  "feedbacks": [
+  ]
+}
