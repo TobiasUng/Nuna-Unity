@@ -21,23 +21,30 @@ public class RobotLead : MonoBehaviour
         /*wallSections = wall.GetComponentsInChildren<Transform>();
         Debug.Log(wallSections.Length);*/
 
-        foreach (Transform row in screwPositions.transform)
+        if (screwPositions != null)
         {
-            foreach (Transform placement in row.transform)
+            foreach (Transform row in screwPositions.transform)
             {
-                screwPositionsOperator.Add(placement);
+                foreach (Transform placement in row.transform)
+                {
+                    screwPositionsOperator.Add(placement);
+                }
             }
         }
+
+        
 
         foreach (Transform row in wall.transform)
         {
             foreach(Transform placement in row.transform)
             {
-
-                int i = Random.Range(0, screwPositionsOperator.Count);
-                Transform randomScrewPosition = screwPositionsOperator[i];
-                screwPositionsOperator.RemoveAt(i);
-                randomScrewPosition.parent = placement.GetChild(0);
+                if (screwPositions != null)
+                {
+                    int i = Random.Range(0, screwPositionsOperator.Count);
+                    Transform randomScrewPosition = screwPositionsOperator[i];
+                    screwPositionsOperator.RemoveAt(i);
+                    randomScrewPosition.parent = placement.GetChild(0);
+                }
 
                 screwPlacementsRobot.Add(placement);
                 screwPlacementsMapRobot.Add(row.tag + placement.GetSiblingIndex(), placement);

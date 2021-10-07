@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597668223406960522}
   m_Layer: 7
-  m_Name: ScrewPlacement
+  m_Name: ScrewPlacement old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8931796710563659172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

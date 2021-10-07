@@ -48,7 +48,8 @@ public class Screw : MonoBehaviour
         {
             if(nut != null)
             {
-                Destroy(nut);
+                nut.SetActive(false);
+                //Destroy(nut);
                 nut.GetComponent<PickUpAndPlaceNut>().resetProgress();
             }
             Destroy(this.gameObject);
