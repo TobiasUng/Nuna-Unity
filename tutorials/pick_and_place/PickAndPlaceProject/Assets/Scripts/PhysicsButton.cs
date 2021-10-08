@@ -20,14 +20,14 @@ public class PhysicsButton : MonoBehaviour
     void Start()
     {
 
-        List<InputDevice> devices = new List<InputDevice>();
+        /*List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
         rightController = devices[0];
 
         InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(leftControllerCharacteristics, devices);
-        leftController = devices[0];
+        leftController = devices[0];*/
 
         startPos = transform.localPosition;
         joint = GetComponent<ConfigurableJoint>();
@@ -57,8 +57,8 @@ public class PhysicsButton : MonoBehaviour
         onPressed.Invoke();
         Debug.Log("Pressed");
 
-        leftController.SendHapticImpulse(0u, 0.5f, 0.1f);
-        rightController.SendHapticImpulse(0u, 0.5f, 0.1f);
+        /*leftController.SendHapticImpulse(0u, 0.5f, 0.1f);
+        rightController.SendHapticImpulse(0u, 0.5f, 0.1f);*/
 
     }
 
