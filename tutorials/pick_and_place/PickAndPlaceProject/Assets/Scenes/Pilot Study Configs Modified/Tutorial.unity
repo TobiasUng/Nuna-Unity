@@ -4320,6 +4320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &390681154 stripped
@@ -6731,6 +6735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &687914623
@@ -7631,6 +7639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &876612352
@@ -8173,6 +8185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1001 &975005379
@@ -9104,6 +9120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &1124486349
@@ -9213,6 +9233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &1153984722
@@ -9678,6 +9702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &1235965561
@@ -11422,6 +11450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1001 &1685178180
@@ -12877,6 +12909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &1867420735
@@ -13936,6 +13972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrewPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 4821881763176750133, guid: 52f09624def406644806811c65dcbf29, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a05e93b45ea30441a3f81d98e6b978e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f09624def406644806811c65dcbf29, type: 3}
 --- !u!1 &2007384531

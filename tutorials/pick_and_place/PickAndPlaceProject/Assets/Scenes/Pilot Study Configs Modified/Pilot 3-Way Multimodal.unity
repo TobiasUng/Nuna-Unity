@@ -14581,6 +14581,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 246011696352196476, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
+      propertyPath: m_TrackingOriginMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 246011696352196476, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 246011696352196477, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_Name
       value: VR Rig
