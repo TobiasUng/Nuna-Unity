@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8277242502460841652}
   - component: {fileID: 8277242502460841654}
   - component: {fileID: 8277242502460841653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clicker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8277242502487901751}
   - component: {fileID: 8277242502487901750}
   - component: {fileID: 8277242502487901737}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Push
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 8277242502758482198}
   - component: {fileID: 8277242502758482197}
   - component: {fileID: 8277242502758482196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8277242502866990201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}

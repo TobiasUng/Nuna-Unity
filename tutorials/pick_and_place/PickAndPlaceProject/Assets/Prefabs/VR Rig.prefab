@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1552524235}
   - component: {fileID: 1552524234}
   - component: {fileID: 1552524238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246011696095985076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 246011696352196476}
   - component: {fileID: -4143462411665031346}
   - component: {fileID: 477360604681918262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246011696594682477}
   - component: {fileID: 246011696594682475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UI Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 246011696796779506}
   - component: {fileID: 246011696796779507}
   - component: {fileID: 591381268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VR Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 246011697391652863}
   - component: {fileID: 246011697391652860}
   - component: {fileID: 246011697391652861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right Hand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 246011697489139705}
   - component: {fileID: 246011697489139654}
   - component: {fileID: 246011697489139655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left Hand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
