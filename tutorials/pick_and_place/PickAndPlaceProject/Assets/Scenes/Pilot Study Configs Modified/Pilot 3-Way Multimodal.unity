@@ -15014,7 +15014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246011697391652862, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_PlayHapticsOnHoverEntered
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246011697391652862, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_HapticHoverEnterIntensity
@@ -15170,7 +15170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246011697489139704, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_PlayHapticsOnHoverEntered
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 246011697489139704, guid: fb3a359e925f9a84e914515ae8c7bc5c, type: 3}
       propertyPath: m_HapticHoverEnterIntensity

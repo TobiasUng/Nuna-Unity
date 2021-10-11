@@ -1,1 +1,2 @@
-{"participant":"P2","scene":"Pilot Visual","robotIdleTime":0.13589289784431458,"distanceMoved":17.594865798950197,"avarageScrewDistance":1.1496926546096802,"completionTime":48.08116912841797,"responseTime":2.5608251094818117,"dangerErrors":0,"errors":1,"screwsPlaced":8,"nutsPlaced":6,"feedbacks":["VisualContinuous2"]}
+{
+  "participant": "P3","scene":"Pilot Visual","robotIdleTime":0.13589289784431458,"distanceMoved":17.594865798950197,"avarageScrewDistance":1.1496926546096802,"completionTime":48.08116912841797,"responseTime":2.5608251094818117,"dangerErrors":0,"errors":1,"screwsPlaced":8,"nutsPlaced":6,"feedbacks":["VisualContinuous2"]}
