@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Linq;
 
 public class PickUpAndPlaceNut : MonoBehaviour
 {
@@ -79,7 +80,10 @@ public class PickUpAndPlaceNut : MonoBehaviour
 
             PlayerStats.pilotStats.screwResponse.Add(screw.GetComponent<Screw>().time - time);
 
-            if (PlayerStats.pilotStats.responseTime <= 0f)
+            PlayerStats.pilotStats.responseTime = Enumerable.Average(PlayerStats.pilotStats.screwResponse);
+
+
+            /*if (PlayerStats.pilotStats.responseTime <= 0f)
             {
                 PlayerStats.pilotStats.responseTime = PlayerStats.pilotStats.responseTime + (screw.GetComponent<Screw>().time - time);
             }
@@ -87,7 +91,7 @@ public class PickUpAndPlaceNut : MonoBehaviour
             else
             {
                 PlayerStats.pilotStats.responseTime = (PlayerStats.pilotStats.responseTime + (screw.GetComponent<Screw>().time - time))/2;
-            }
+            }*/
             //PlayerStats.pilotStats.responseTime = PlayerStats.pilotStats.responseTime + screw.GetComponent<Screw>().time / PlayerStats.pilotStats.nutsPlaced;
 
 
