@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Screw : MonoBehaviour
 {
 
+    public static List<float> screwDistances = new List<float>();
     public UnityEvent onStart;
     public float distanceToPlayer;
     public float dangerDistance = 0.4f;
@@ -21,15 +22,9 @@ public class Screw : MonoBehaviour
         PlayerStats.pilotStats.screwsPlaced++;
         PlayerStats.pilotStats.completionTime = Time.realtimeSinceStartup - PlayerStats.startTime;
 
-        if (PlayerStats.pilotStats.avarageScrewDistance == 0)
-        {
-            PlayerStats.pilotStats.avarageScrewDistance = distanceToPlayer;
-        }
+        screwDistances.Add(distanceToPlayer);
 
-        else
-        {
-            PlayerStats.pilotStats.avarageScrewDistance = (PlayerStats.pilotStats.avarageScrewDistance + distanceToPlayer)/2;
-        }
+        PlayerStats.pilotStats.avarageScrewDistance = System.Linq.Enumerable.Average(screwDistances);
 
 
         if (distanceToPlayer <= dangerDistance)
