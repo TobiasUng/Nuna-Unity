@@ -1,0 +1,1 @@
+{"participant":"P7","scene":"3-Way Multimodal","robotIdleTime":0.1922679841518402,"distanceMoved":21.81043815612793,"avarageScrewDistance":0.6771479845046997,"completionTime":89.1524658203125,"responseTime":0.8446248769760132,"dangerErrors":0,"errors":1,"screwsPlaced":15,"nutsPlaced":14,"feedbacks":["AudioPulse2","HapticPulse","VisualContinuous2"]}

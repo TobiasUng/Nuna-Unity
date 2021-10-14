@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     public static string fileName;
     public static float startTime;
     public static float endTime;
-    public static string participant = "P4";
+    public static string participant = "P10";
 
 
     public void Start()
@@ -57,6 +57,8 @@ public class PilotStats
     public float distanceMoved = 0f;
     public float avarageScrewDistance = 0f;
     public float completionTime = 0f;
+    public List<float> screwResponse = new List<float>();
+    //public List<float> screwResponseAlt = new List<float>();
     public float responseTime = 0f;
     public int dangerErrors = 0;
     public int errors = 0;
