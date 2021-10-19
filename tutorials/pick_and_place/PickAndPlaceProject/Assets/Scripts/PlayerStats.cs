@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     public static string fileName;
     public static float startTime;
     public static float endTime;
-    public static string participant = "P18";
+    public static string participant = "P19";
 
 
     public void Start()
