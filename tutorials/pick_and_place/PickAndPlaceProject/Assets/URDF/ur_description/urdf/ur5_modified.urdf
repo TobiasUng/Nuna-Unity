@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="ur5_modified">
+  <material name="LightGrey">
+    <color rgba="0.7 0.7 0.7 1" />
+  </material>
+  <link name="world" />
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.00443333154544234" ixy="0" ixz="0" iyy="0.00443333154544234" iyz="0" izz="0.00720000034198165" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/base.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/base.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="base" />
+  <link name="shoulder_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="3.7000000477" />
+      <inertia ixx="0.0102674961090088" ixy="0" ixz="0" iyy="0.0102674961090088" iyz="0" izz="0.00665999995544553" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/shoulder.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/shoulder.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="upper_arm_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.28" />
+      <mass value="8.392999649" />
+      <inertia ixx="0.226890683174133" ixy="0" ixz="0" iyy="0.226890683174133" iyz="0" izz="0.0151073997840285" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/upperarm.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/upperarm.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="forearm_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.196125" />
+      <mass value="2.2750000954" />
+      <inertia ixx="0.0312167908996344" ixy="0" ixz="0" iyy="0.0312167908996344" iyz="0" izz="0.00409500021487474" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/forearm.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/forearm.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_1_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.093 0" />
+      <mass value="1.2189999819" />
+      <inertia ixx="0.00255989888682961" ixy="0" ixz="0" iyy="0.00255989888682961" iyz="0" izz="0.00219419994391501" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/wrist1.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/wrist1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_2_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.09465" />
+      <mass value="1.2189999819" />
+      <inertia ixx="0.00255989888682961" ixy="0" ixz="0" iyy="0.00255989888682961" iyz="0" izz="0.00219419994391501" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/wrist2.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/wrist2.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_3_link">
+    <inertial>
+      <origin rpy="0 0 270" xyz="0 0.06505 0" />
+      <mass value="0.1879000068" />
+      <inertia ixx="8.46958937472664E-05" ixy="0" ixz="0" iyy="0.000132117216708139" iyz="6.37147062540477E-12" izz="8.46959082991816E-05" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/wrist3.dae" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/wrist3.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tool0" />
+  <link name="ee_link">
+    <collision>
+      <origin xyz="-0.01 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="world_joint" type="fixed">
+    <origin xyz="0 0 0.63" />
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+  <joint name="base_link-base_fixed_joint" type="fixed">
+    <origin rpy="0 0 -3.141593" />
+    <parent link="base_link" />
+    <child link="base" />
+  </joint>
+  <joint name="shoulder_pan_joint" type="revolute">
+    <origin rpy="0 0 -4.712389" xyz="0 0 0.089159" />
+    <parent link="base_link" />
+    <child link="shoulder_link" />
+    <limit lower="-6.28318525850773" upper="6.28318525850773" effort="150" velocity="7" />
+  </joint>
+  <joint name="shoulder_lift_joint" type="revolute">
+    <origin xyz="0 0.13585 0" />
+    <parent link="shoulder_link" />
+    <child link="upper_arm_link" />
+    <limit lower="-6.28318525850773" upper="6.28318525850773" effort="150" velocity="7" />
+  </joint>
+  <joint name="elbow_joint" type="revolute">
+    <origin rpy="0 4.712389 0" xyz="0 -0.1197 0.425" />
+    <parent link="upper_arm_link" />
+    <child link="forearm_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="150" velocity="7" />
+  </joint>
+  <joint name="wrist_1_joint" type="revolute">
+    <origin rpy="0 1.570796 0" xyz="0 0 0.39225" />
+    <parent link="forearm_link" />
+    <child link="wrist_1_link" />
+    <limit lower="-6.28318525850773" upper="6.28318525850773" effort="28" velocity="7" />
+  </joint>
+  <joint name="wrist_2_joint" type="revolute">
+    <origin xyz="0 0.093 0" />
+    <parent link="wrist_1_link" />
+    <child link="wrist_2_link" />
+    <limit lower="-6.28318525850773" upper="6.28318525850773" effort="28" velocity="7" />
+  </joint>
+  <joint name="wrist_3_joint" type="revolute">
+    <origin xyz="0 0 0.09465" />
+    <parent link="wrist_2_link" />
+    <child link="wrist_3_link" />
+    <limit lower="-6.28318525850773" upper="6.28318525850773" effort="28" velocity="7" />
+  </joint>
+  <joint name="wrist_3_link-tool0_fixed_joint" type="fixed">
+    <origin rpy="-1.570796 0 0" xyz="0 0.0823 0" />
+    <parent link="wrist_3_link" />
+    <child link="tool0" />
+  </joint>
+  <joint name="ee_fixed_joint" type="fixed">
+    <origin rpy="0 0 -4.712389" xyz="0 0.0823 0" />
+    <parent link="wrist_3_link" />
+    <child link="ee_link" />
+  </joint>
+  <gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="ros_control">
+    <!--robotNamespace>/</robotNamespace-->
+    <!--robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType-->
+  </plugin>
+  <!--
+    <plugin name="gazebo_ros_power_monitor_controller" filename="libgazebo_ros_power_monitor.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>1.0</updateRate>
+      <timeout>5</timeout>
+      <powerStateTopic>power_state</powerStateTopic>
+      <powerStateRate>10.0</powerStateRate>
+      <fullChargeCapacity>87.78</fullChargeCapacity>     
+      <dischargeRate>-474</dischargeRate>
+      <chargeRate>525</chargeRate>
+      <dischargeVoltage>15.52</dischargeVoltage>
+      <chargeVoltage>16.41</chargeVoltage>
+    </plugin>
+-->
+</gazebo>
+<transmission name="shoulder_pan_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="shoulder_pan_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="shoulder_pan_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="shoulder_lift_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="shoulder_lift_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="shoulder_lift_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="elbow_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="elbow_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="elbow_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="wrist_1_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wrist_1_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wrist_1_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="wrist_2_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wrist_2_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wrist_2_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="wrist_3_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wrist_3_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wrist_3_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="shoulder_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="upper_arm_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="forearm_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="wrist_1_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="wrist_3_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="wrist_2_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="ee_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+</robot>
