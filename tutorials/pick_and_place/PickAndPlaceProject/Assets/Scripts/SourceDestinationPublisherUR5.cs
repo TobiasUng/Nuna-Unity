@@ -6,7 +6,7 @@ using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using Unity.Robotics.UrdfImporter;
 using UnityEngine;
 
-public class SourceDestinationPublisherUR5 : MonoBehaviour
+public class SourceDestinationPublisherUr5 : MonoBehaviour
 {
     const int k_NumRobotJoints = 6;
 
