@@ -11,7 +11,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
 {
     // Hardcoded variables
     const int k_NumRobotJoints = 6;
-    const float k_JointAssignmentWait = 0.1f;
+    const float k_JointAssignmentWait = 0.3f;
     const float k_PoseAssignmentWait = 0.5f;
 
     // Variables required for ROS communication
@@ -111,6 +111,8 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
             joints.joints[i] = m_JointArticulationBodies[i].jointPosition[0];
         }
 
+        print(joints);
+
         return joints;
     }
 
@@ -196,7 +198,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
                 // Close the gripper if completed executing the trajectory for the Grasp pose
                 if (poseIndex == (int)Poses.Grasp)
                 {
-                    CloseGripper();
+                    //CloseGripper();
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment
@@ -204,7 +206,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
             }
 
             // All trajectories have been executed, open the gripper to place the target cube
-            OpenGripper();
+            //OpenGripper();
         }
     }
 
