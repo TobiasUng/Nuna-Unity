@@ -64,8 +64,10 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
         var rightGripper = linkName + "/tool_link/gripper_base/servo_head/control_rod_right/right_gripper";
         var leftGripper = linkName + "/tool_link/gripper_base/servo_head/control_rod_left/left_gripper";
 
-        m_RightGripper = m_Ur5.transform.Find(rightGripper).GetComponent<ArticulationBody>();
-        m_LeftGripper = m_Ur5.transform.Find(leftGripper).GetComponent<ArticulationBody>();
+        m_RightGripper = null;
+        m_LeftGripper = null;
+        //m_RightGripper = m_Ur5.transform.Find(rightGripper).GetComponent<ArticulationBody>();
+        //m_LeftGripper = m_Ur5.transform.Find(leftGripper).GetComponent<ArticulationBody>();
     }
 
     /// <summary>
@@ -172,6 +174,9 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
     /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {
+
+        print(response);
+
         if (response.trajectories != null)
         {
             // For every trajectory plan returned
