@@ -11,7 +11,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
 {
     // Hardcoded variables
     const int k_NumRobotJoints = 6;
-    const float k_JointAssignmentWait = 0.3f;
+    const float k_JointAssignmentWait = 0.01f;
     const float k_PoseAssignmentWait = 0.5f;
 
     // Variables required for ROS communication
@@ -175,7 +175,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {
 
-        print(response);
+        int count = 0;
 
         if (response.trajectories != null)
         {
@@ -191,6 +191,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
                     // Set the joint values for every joint
                     for (var joint = 0; joint < m_JointArticulationBodies.Length; joint++)
                     {
+                        count++;
                         var joint1XDrive = m_JointArticulationBodies[joint].xDrive;
                         joint1XDrive.target = result[joint];
                         m_JointArticulationBodies[joint].xDrive = joint1XDrive;
@@ -213,6 +214,8 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
             // All trajectories have been executed, open the gripper to place the target cube
             //OpenGripper();
         }
+
+        print(count);
     }
 
     enum Poses
