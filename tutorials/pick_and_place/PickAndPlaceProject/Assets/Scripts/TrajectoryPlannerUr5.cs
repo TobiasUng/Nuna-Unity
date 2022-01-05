@@ -11,7 +11,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
 {
     // Hardcoded variables
     const int k_NumRobotJoints = 6;
-    const float k_JointAssignmentWait = 0.01f;
+    const float k_JointAssignmentWait = 0.03f;
     const float k_PoseAssignmentWait = 0.5f;
 
     // Variables required for ROS communication
@@ -35,8 +35,8 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
 
     // Articulation Bodies
     ArticulationBody[] m_JointArticulationBodies;
-    ArticulationBody m_LeftGripper;
-    ArticulationBody m_RightGripper;
+    public ArticulationBody m_LeftGripper;
+    public ArticulationBody m_RightGripper;
 
     // ROS Connector
     ROSConnection m_Ros;
@@ -61,13 +61,11 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
         }
 
         // Find left and right fingers
-        var rightGripper = linkName + "/tool_link/gripper_base/servo_head/control_rod_right/right_gripper";
-        var leftGripper = linkName + "/tool_link/gripper_base/servo_head/control_rod_left/left_gripper";
+        var rightGripper = linkName + "/tool0/gripper_base/servo_head/control_rod_right/right_gripper";
+        var leftGripper = linkName + "/tool0/gripper_base/servo_head/control_rod_left/left_gripper";
 
-        m_RightGripper = null;
-        m_LeftGripper = null;
-        //m_RightGripper = m_Ur5.transform.Find(rightGripper).GetComponent<ArticulationBody>();
-        //m_LeftGripper = m_Ur5.transform.Find(leftGripper).GetComponent<ArticulationBody>();
+        m_RightGripper = m_Ur5.transform.Find(rightGripper).GetComponent<ArticulationBody>();
+        m_LeftGripper = m_Ur5.transform.Find(leftGripper).GetComponent<ArticulationBody>();
     }
 
     /// <summary>
@@ -204,7 +202,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
                 // Close the gripper if completed executing the trajectory for the Grasp pose
                 if (poseIndex == (int)Poses.Grasp)
                 {
-                    //CloseGripper();
+                    CloseGripper();
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment
@@ -212,7 +210,7 @@ public class TrajectoryPlannerUr5 : MonoBehaviour
             }
 
             // All trajectories have been executed, open the gripper to place the target cube
-            //OpenGripper();
+            OpenGripper();
         }
 
         print(count);
